@@ -9,7 +9,8 @@ class WorkoutsController < ApplicationController
     user = User.find(params[:user_id])
     @workout = user.workouts.new(workout_params)
     if @workout.save
-      redirect_to user_path(user)
+      # redirect_to user_path(user)
+      redirect_to show_workout_path
     else
       redirect_to new_user__workout_path(user)
     end
@@ -17,6 +18,7 @@ class WorkoutsController < ApplicationController
 
   def show
     # @user = User.find(params[:id])
+    @workout = Workout.find(params[:workout_id])
   end
 
   def edit

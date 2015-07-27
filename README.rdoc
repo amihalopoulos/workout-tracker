@@ -1,0 +1,40 @@
+== README
+
+Goals of this app:
+-Track daily workouts
+- display monthly/weekly schedule that shows past and future workouts
+-FOR LIFTING
+  -track all exercises completed (with reps and weight)
+  -track all muscles used
+  -mark time of day
+  -what supplements were taken before/after workout
+  -ex. say on tuesday I work chest, I name that workout "Chest" and then choose the exercises that I did. For each exercise, add the sets/reps/weight
+-FOR RUNNING
+  -mileage
+  -time
+  -time of day
+-DIET
+  - what supplements did I take that day?
+  -how may calories did I intake?
+  -how many calories did I burn?
+  -Net Calories
+-BODY
+  -How much did I weigh that day?
+  -Show graph of weight increase/decrease
+  -body fat percentage?
+
+------------------------------------------------------
+LOGISTICS
+-user(model)
+-a user profile page displays a schedule with all of their workouts on the schedule
+-a workout(model)
+  -a date (non-timestamp)
+  -a name/title
+  -body parts
+  -exercises(model)
+    -body part(s)
+    -location
+    -sets completed
+    -reps completed
+    -weight used
+    -drop set/rest-pause

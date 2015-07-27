@@ -7,3 +7,24 @@
 <p><%= link_to "Add New Workout", new_user_workout_path(user_id: @user.id) %></p>
 
 <h4>Calender</h4>
+
+<div id="calender">
+    <h2 id="month">
+    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
+    <%=h @date.strftime("%B %Y") %>
+    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+  </h2>
+
+<%= calendar_for @user.workouts, :year => @date.year, :month => @date.month do |t| %>
+  <%= t.head( 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat') %>
+  <%= t.day do |day, workouts| %>
+    <%= day.day %>
+      <ul>
+        <% for workout in workouts %>
+          <li><%= workout.name %></li>
+        <% end %>
+      </ul>
+  <% end %>
+<% end %>
+
+</div>

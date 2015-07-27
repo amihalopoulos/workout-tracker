@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @date = params[:month] ? Date.parse(params[:month]) : Date.today
   end
 
   def edit

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resource :session, :only => [:new, :create, :destroy]
 
+  get 'workouts/(:workout_id)', to: 'workouts#show', as: :show_workout
+
   get 'signin' => 'sessions#new', as: 'signin'
   get 'signout' => 'sessions#destroy', as: 'signout'
   get 'signup' => 'users#new', as: 'signup'

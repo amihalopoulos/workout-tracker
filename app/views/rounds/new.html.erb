@@ -1,0 +1,10 @@
+<h2>Add Set for <%= "#{@round.exercise.name} in workout #{@round.exercise.workout.name}" %></h2>
+
+  <%= form_for @round, url: user_workout_exercise_rounds_path do |f| %>
+    <h2>Add Set</h2>
+    <%= f.label :reps, "Reps: " %>
+    <%= f.text_field :reps %> <br>
+    <%= f.label :weight, "Weight:" %>
+    <%= f.text_field :weight %> <br>
+    <%= f.submit 'Submit' %>
+  <% end %>

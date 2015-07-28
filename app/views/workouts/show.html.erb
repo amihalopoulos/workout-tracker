@@ -1,1 +1,17 @@
-<h1><%= "#{@workout.name} on #{@workout.date.strftime("%A %B %d %Y")}"  %> </h1>
+<h1><%= "#{@workout.name} on #{@workout.date.strftime("%A %B %d %Y")}" %> </h1>
+<p><%= link_to "EDIT", edit_user_workout_path(@workout.user, @workout) %></p>
+<br>
+<h2>Exercises (<%= link_to "Add Exercise", new_user_workout_exercise_path(@workout.user, @workout) %>)</h2>
+
+  <% @workout.exercises.each_with_index do |exercise, index| %>
+    <h4><%= "#{index + 1}. #{exercise.name}" %></h4>
+      Sets: <%= exercise.rounds.count %>
+      <% count = 1 %>
+      <% exercise.rounds.each do |set| %>
+        <p><%= "Set #{count}: #{set.reps} reps at #{set.weight} lbs" %></p>
+        <% count += 1 %>
+      <% end %>
+  <% end %>
+
+
+

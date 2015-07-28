@@ -1,6 +1,6 @@
-class CreateSets < ActiveRecord::Migration
+class CreateRounds < ActiveRecord::Migration
   def change
-    create_table :sets do |t|
+    create_table :rounds do |t|
       t.integer :reps, null: false
       t.integer :weight, null: false
       t.references :exercise, null: false

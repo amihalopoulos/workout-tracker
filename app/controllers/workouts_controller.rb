@@ -18,11 +18,12 @@ class WorkoutsController < ApplicationController
 
   def show
     # @user = User.find(params[:id])
-    @workout = Workout.find(params[:workout_id])
+    params[:workout_id] ? @workout = Workout.find(params[:workout_id]) : @workout = Workout.find(params[:id])
   end
 
   def edit
     # @user = User.find(params[:id])
+    @workout = Workout.find(params[:id])
   end
 
   private

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :workouts do
       resources :exercises do
-        resources :sets
+        resources :rounds
       end
     end
   end

@@ -1,7 +1,7 @@
 <h1><%= @user.name %></h1>
 <p>email: <%= @user.email %></p>
 
-<% @user.workouts.each do |workout| %>
+<% @recent_workouts.each do |workout| %>
   <p>You completed <%= workout.name %> workout on <%= workout.date %></p>
 <% end %>
 <p><%= link_to "Add New Workout", new_user_workout_path(user_id: @user.id) %></p>
@@ -21,7 +21,7 @@
     <%= day.day %>
       <ul>
         <% for workout in workouts %>
-          <li><%= workout.name %></li>
+          <li><%= link_to workout.name, user_workout_path(workout.user, workout) %></li>
         <% end %>
       </ul>
   <% end %>

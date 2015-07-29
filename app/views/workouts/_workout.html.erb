@@ -1,0 +1,10 @@
+<h1><%= "#{@workout.name} on #{@workout.date.strftime("%A %B %d %Y")}" %> </h1>
+<p><%= link_to "EDIT", edit_user_workout_path(@workout.user, @workout) %></p>
+<br>
+<div id="exercise_list">
+  <h2>Exercises (<%= link_to "Add Exercise", new_user_workout_exercise_path(@workout.user, @workout), remote: true, id: "new_exercise_link" %>)</h2>
+</div>
+  <% @workout.exercises.each_with_index do |exercise, index| %>
+    <%= render exercise %>
+  <% end %>
+  <br>

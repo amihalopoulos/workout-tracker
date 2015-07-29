@@ -1,9 +1,10 @@
-
-  <%= form_for @workout, url: user_workouts_path do |f| %>
+<div id="workout_create_container">
+  <%= form_for @workout, url: user_workouts_path, remote: true do |f| %>
     <h2>Add Workout</h2>
     <%= f.label :name, "Describe Your Workout: " %>
     <%= f.text_field :name %> <br>
     <%= f.label :date, "Date of Workout:" %>
     <%= f.date_select :date %> <br>
-    <%= f.submit 'Submit' %>
+    <%= f.submit 'Submit', id: "new_workout_submit" %>
   <% end %>
+</div>

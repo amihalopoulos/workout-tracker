@@ -4,6 +4,9 @@ class ExercisesController < ApplicationController
     # user = User.find(params[:user_id])
     workout = Workout.find(params[:workout_id])
     @exercise = workout.exercises.new
+    respond_to do |format|
+        format.js
+      end
   end
 
   def create
@@ -11,7 +14,10 @@ class ExercisesController < ApplicationController
     workout = Workout.find(params[:workout_id])
     @exercise = workout.exercises.new(exercise_params)
     if @exercise.save
-      redirect_to user_workout_exercise_path(workout.user, workout, @exercise)
+      respond_to do |format|
+        format.html { redirect_to user_workout_exercise_path(workout.user, workout, @exercise) }
+        format.js
+      end
     else
       redirect_to show_workout_path(workout)
     end

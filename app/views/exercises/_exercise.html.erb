@@ -1,0 +1,11 @@
+<br>
+<div class="exercise_list">
+<%= exercise.name %> <br>
+
+<% exercise.rounds.each_with_index do |round, index| %>
+  <p><%= "Set #{index + 1}:" %></p>
+  <%= render round %>
+<% end %>
+
+<%= link_to "Add Sets", new_user_workout_exercise_round_path(exercise.workout.user, exercise.workout, exercise), remote: true %>
+</div>

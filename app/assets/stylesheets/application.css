@@ -15,8 +15,6 @@
  */
 
 html {
-  background-color: black;
-  color: white;
   text-align: center;
   font-family:sans-serif;
 }
@@ -92,7 +90,7 @@ nav {
   height: 50px;
   border-radius: 5px;
   margin: 0 auto;
-  border-left: 6px solid #777;
+  /*border-left: 6px solid #777;*/
   border-bottom: 6px solid #777;
   border-radius: 15px;
   background-color: #DDD;

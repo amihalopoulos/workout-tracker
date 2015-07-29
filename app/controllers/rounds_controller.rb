@@ -2,13 +2,20 @@ class RoundsController < ApplicationController
   def new
     exercise = Exercise.find(params[:exercise_id])
     @round = exercise.rounds.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
     exercise = Exercise.find(params[:exercise_id])
     @round = exercise.rounds.new(round_params)
     if @round.save
-      redirect_to user_workout_exercise_path(exercise.workout.user, exercise.workout, exercise)
+      respond_to do |format|
+        format.html { redirect_to user_workout_exercise_path(exercise.workout.user, exercise.workout, exercise) }
+        format.js
+      end
+
     else
       redirect_to show_workout_path(exercise.workout)
     end

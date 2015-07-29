@@ -1,0 +1,6 @@
+<%= exercise.name %> <br>
+<%= link_to "Add Sets", new_user_workout_exercise_round_path(exercise.workout.user, exercise.workout, exercise) %>
+
+<% exercise.rounds.each_with_index do |round, index| %>
+  <p><%= "Set #{index + 1}: #{round.reps} reps at #{round.weight} pounds." %></p>
+<% end %>

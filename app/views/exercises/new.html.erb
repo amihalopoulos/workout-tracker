@@ -1,6 +1,6 @@
 <h1>Add Exercise to <%= link_to @exercise.workout.name, show_workout_path(@workout) %></h1>
 
-  <%= form_for @exercise, url: user_workout_exercises_path do |f| %>
+  <%= form_for @exercise, url: user_workout_exercises_path, id: "new_exercise_link", remote: true do |f| %>
     <%= f.label :name, "Exercise: " %>
     <%= f.text_field :name %>
     <%= f.submit 'Submit' %>

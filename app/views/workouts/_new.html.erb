@@ -1,0 +1,17 @@
+<div id="workout_create_container">
+  <%= form_for Workout.new, url: user_workouts_path(@user), remote: true do |f| %>
+    <h2>Add Workout</h2>
+    <div class="input_label_pair">
+      <%= f.label :name, "Describe Your Workout: " %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="input_label_pair">
+      <%= f.label :date, "Date of Workout:" %>
+      <%= f.text_field :date, class: "datepicker" %>
+    </div>
+    <div class="input_label_pair">
+      <%= f.submit 'Save', id: "new_workout_submit" %>
+    </div>
+
+  <% end %>
+</div>

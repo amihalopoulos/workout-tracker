@@ -13,19 +13,21 @@
  *= require_tree .
  *= require_self
  */
-
 html {
-  text-align: center;
+  /*text-align: center;*/
   font-family:sans-serif;
 }
 #container {
-  padding: 60px;
+  padding: 80px;
+
 }
 table {
   border-collapse: collapse;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  /*float: left;
+  margin-left: 1%;*/
 }
 
 table td,
@@ -96,9 +98,11 @@ nav {
   background-color: #DDD;
   right: 0;
   left: 0;
+  top: 0;
   margin-right: auto;
   margin-left: auto;
   width: 90%;
+  text-align: center;
 }
 
 nav li {
@@ -113,22 +117,51 @@ nav a {
   color: #777;
 }
 
-.navbar-header {
+#user_info {
+ /* float: left;*/
+  width: 60%;
+  height: 300px;
+  background-color: #DDD;
+  border: 5px solid #777;
+ /* margin-left: 1%;*/
+   margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  overflow: auto;
+}
+#user_image {
+  float: left
+}
+
+#user_image img {
+  height: 200px;
+  width: auto;
+  padding: 10px 0 0 10px;
+  display: block;
+}
+
+#user_about {
+  margin-left: 10px;
   float: left;
 }
-.navbar-brand {
-  margin-left: -15px;
-}
-.navbar-nav {
+
+#this_week {
   float: left;
-  margin: 0;
+  margin-left: 30px;
 }
-.navbar-nav > li {
-  float: left;
+
+#calendar_header {
+ /*float: left;*/
+ width: 60%;
+ background-color: #DDD;
+ text-align: center;
+ /*margin: 1% 0 0 1%;*/
+ margin-top: 10px;
+   margin-left: auto;
+  margin-right: auto;
+ border: 1px solid #999;
+ border-radius: 2px;
 }
-.navbar-nav > li > a {
-  padding: 15px;
-}
-.navbar-nav.navbar-right {
-  float: right;
+#user_info, #calendar_header, table {
+
 }

@@ -1,20 +1,32 @@
-<h1><%= @user.name %></h1>
-<p>email: <%= @user.email %></p>
+<div id="user_info">
+  <div id="user_image"><img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAKtAAAAJGRlNTY2OGUxLTRkOWYtNDQ4Ny1hN2I4LTM0NzhhMTYyOGQyNQ.jpg" alt="" id="user_pic">
+  </div>
+  <div id="user_about">
+    <h1><%= @user.name %></h1>
+    <h5>Last Workout:</h5> <%= @recent_workouts.last.date %><!-- make days ago -->
+    <h5>Points: </h5> 1,000
+    <h5>Streak: </h5> 1 day
+  </div>
+  <div id="this_week">
+    <h1>Past Week:</h1>
+    <% @recent_workouts.each do |workout| %>
+      <p>You completed <%= workout.name %> workout on <%= workout.date %></p>
+    <% end %>
+    <p><%= link_to "Add New Workout", new_user_workout_path(user_id: @user.id) %></p>
+  </div>
+</div>
 
-<% @recent_workouts.each do |workout| %>
-  <p>You completed <%= workout.name %> workout on <%= workout.date %></p>
-<% end %>
-<p><%= link_to "Add New Workout", new_user_workout_path(user_id: @user.id) %></p>
 
-<h4>Calender</h4>
 
-<div id="calender">
-    <h2 id="month">
+
+<div id="calendar_header">
+  <h2 id="month">
     <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
     <%=h @date.strftime("%B %Y") %>
     <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
   </h2>
-
+</div>
+<div id="calender">
 <%= calendar_for @user.workouts, :year => @date.year, :month => @date.month do |t| %>
   <%= t.head( 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat') %>
   <%= t.day do |day, workouts| %>

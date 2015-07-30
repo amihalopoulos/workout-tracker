@@ -29,6 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 #for the calender
 gem "watu_table_builder", :require => "table_builder"
 
+gem 'jquery-ui-rails'
+gem 'jquery-modal-rails', :git => 'git://github.com/amihalopoulos/jquery-modal-rails'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

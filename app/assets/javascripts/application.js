@@ -12,48 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
+//= require jquery.modal
 //= require_tree .
 
-// $(document).ready(function(){
-//     $(".new_workout").on('click', function(event) {
-//       event.preventDefault();
-
-//       $.ajax({
-//           type: 'POST',
-//           success: function() {
-//             alert("hello")
-//           }
-//       });
-
-//       });
-//     });
-
-var formAjax = {
-  init: function() {
-    $('#new_workout').on('ajax:success', this.appendForm);
-    $('#new_workout').on('ajax:error', this.displayError);
-  },
-
-  appendForm: function() {
-    console.log(arguments)
-  },
-  displayError: function() {
-    console.log(arguments)
-  }
-}
-$(document).ready(function() {
-  formAjax.init();
-//   $('#new_workout').on('submit', function(event){
-//       event.preventDefault();
-//       $form = $(event.target);
-
-//       $.ajax({
-//       url: $form.serialize(),
-//       type: 'post'
-//       // data: {"tweet[content]": $textarea.val(), "hashtags": hashtags}
-//     }).done(function(response){
-//       console.log(response)
-//   })
-// })
-})
+$(function() {
+  $('.datepicker').datepicker();
+});

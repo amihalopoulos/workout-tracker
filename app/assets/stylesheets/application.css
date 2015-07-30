@@ -26,8 +26,8 @@ table {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  float: left;
-  margin-left: 1%;
+  /*float: left;
+  margin-left: 1%;*/
 }
 
 table td,
@@ -102,6 +102,7 @@ nav {
   margin-right: auto;
   margin-left: auto;
   width: 90%;
+  text-align: center;
 }
 
 nav li {
@@ -116,33 +117,15 @@ nav a {
   color: #777;
 }
 
-.navbar-header {
-  float: left;
-}
-.navbar-brand {
-  margin-left: -15px;
-}
-.navbar-nav {
-  float: left;
-  margin: 0;
-}
-.navbar-nav > li {
-  float: left;
-}
-.navbar-nav > li > a {
-  padding: 15px;
-}
-.navbar-nav.navbar-right {
-  float: right;
-}
-
 #user_info {
-  float: left;
+ /* float: left;*/
   width: 60%;
   height: 300px;
   background-color: #DDD;
   border: 5px solid #777;
-  margin-left: 1%;
+ /* margin-left: 1%;*/
+   margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
   overflow: auto;
 }
@@ -168,10 +151,17 @@ nav a {
 }
 
 #calendar_header {
- float: left;
+ /*float: left;*/
  width: 60%;
  background-color: #DDD;
  text-align: center;
- margin: 1% 0 0 1%;
+ /*margin: 1% 0 0 1%;*/
+ margin-top: 10px;
+   margin-left: auto;
+  margin-right: auto;
  border: 1px solid #999;
+ border-radius: 2px;
+}
+#user_info, #calendar_header, table {
+
 }

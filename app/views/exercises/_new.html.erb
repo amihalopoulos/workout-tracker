@@ -1,5 +1,12 @@
+<div class="exercise_create_container">
   <%= form_for @exercise, url: user_workout_exercises_path, id: "new_exercise_link", remote: true do |f| %>
-    <%= f.label :name, "Name of Exercise: " %>
-    <%= f.text_field :name %>
-    <%= f.submit 'Submit' %>
+    <div class="input_label_pair">
+      <%= f.label :name, "Name of Exercise: " %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="input_label_pair">
+      <%= f.submit 'Submit' %>
+    </div>
+
   <% end %>
+</div>

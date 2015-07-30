@@ -226,8 +226,12 @@ form label {
 }
 
 .input_label_pair {
-  padding: 10px;
+  padding: 20px;
 }
+.input_label_pair input {
+  height: 20px;
+}
+
 #workout_header {
   width: 100%;
 }

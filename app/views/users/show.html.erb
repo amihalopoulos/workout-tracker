@@ -12,7 +12,9 @@
     <% @recent_workouts.each do |workout| %>
       <p>You completed <%= workout.name %> workout on <%= workout.date %></p>
     <% end %>
-    <p><%= link_to "Add New Workout", new_user_workout_path(user_id: @user.id) %></p>
+    <!-- <p><%= link_to "Add New Workout", new_user_workout_path(user_id: @user.id) %></p> -->
+    <p><%= link_to_modal "Add New Workout", "#demo-form", :class=>"button" %></p>
+
   </div>
 </div>
 
@@ -21,9 +23,9 @@
 
 <div id="calendar_header">
   <h2 id="month">
-    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
+    <%= button_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m"), :method => "get" %>
     <%=h @date.strftime("%B %Y") %>
-    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+    <%= button_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m"), :method => "get" %>
   </h2>
 </div>
 <div id="calender">
@@ -40,3 +42,10 @@
 <% end %>
 
 </div>
+
+<div id="demo-form" class="demo-description" style="display: none; ">
+  <%= render 'workouts/new', locales: {user: @user} %>
+  <br>
+  <%= button_to "Finished", user_path(@user), :method => "get", class: "non-form-button" %>
+</div>
+

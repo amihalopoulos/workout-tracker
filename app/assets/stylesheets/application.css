@@ -54,6 +54,10 @@ nav a {
   color: #777;
 }
 
+nav a:hover {
+  color: #ffffff;
+}
+
 #calendar_wrapper {
   /*float: right;*/
   width: 60%;

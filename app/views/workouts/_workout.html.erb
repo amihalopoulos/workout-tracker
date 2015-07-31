@@ -2,11 +2,11 @@
   <h1><%= @workout.name %> <span><%= link_to "EDIT", edit_user_workout_path(@workout.user, @workout) %></span></h1>
   <p><%= @workout.date.strftime("%A %B %d %Y") %></p>
   <p><%= link_to "Add Exercise", new_user_workout_exercise_path(@workout.user, @workout), remote: true, id: "new_exercise_link" %></p>
-
-  <div id="exercise_list">
+</div>
+<div class="exercise_list">
     <h4>Exercises</h4>
     <% @workout.exercises.each do |exercise| %>
       <%= render exercise %>
     <% end %>
   </div>
-</div>
+

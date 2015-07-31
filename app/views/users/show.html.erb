@@ -20,44 +20,46 @@
 
 
 
+<div id="calendar_wrapper">
+  <div id="calendar_header">
+    <h2 id="month">
+      <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m"), :method => "get" %>
+      <%=h @date.strftime("%B %Y") %>
+      <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m"), :method => "get" %>
+    </h2>
+  </div>
 
-<div id="calendar_header">
-  <h2 id="month">
-    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m"), :method => "get" %>
-    <%=h @date.strftime("%B %Y") %>
-    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m"), :method => "get" %>
-  </h2>
-</div>
-<div id="calendar">
-<%= calendar_for @user.workouts, :year => @date.year, :month => @date.month, id: "main_cal" do |t| %>
-  <%= t.head( 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat') %>
-  <%= t.day do |day, workouts| %>
-    <%= day.day %>
-      <ul>
-        <% for workout in workouts %>
-          <% case workout.name.downcase %>
-            <% when "chest" %>
-              <div id="cal_workout" class="chest">
-            <% when "back" %>
-              <div id="cal_workout" class="back">
-            <% when "arms" %>
-              <div id="cal_workout" class="arms">
-            <% when "legs" %>
-              <div id="cal_workout" class="legs">
-            <% when "shoulders" %>
-              <div id="cal_workout" class="shoulders">
-            <% when "abs" %>
-              <div id="cal_workout" class="abs">
-            <% else %>
-              <div id="cal_workout" class="other">
+  <div id="calendar">
+  <%= calendar_for @user.workouts, :year => @date.year, :month => @date.month, id: "main_cal" do |t| %>
+    <%= t.head( 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat') %>
+    <%= t.day do |day, workouts| %>
+      <%= day.day %>
+        <ul>
+          <% for workout in workouts %>
+            <% case workout.name.downcase %>
+              <% when "chest" %>
+                <div id="cal_workout" class="chest">
+              <% when "back" %>
+                <div id="cal_workout" class="back">
+              <% when "arms" %>
+                <div id="cal_workout" class="arms">
+              <% when "legs" %>
+                <div id="cal_workout" class="legs">
+              <% when "shoulders" %>
+                <div id="cal_workout" class="shoulders">
+              <% when "abs" %>
+                <div id="cal_workout" class="abs">
+              <% else %>
+                <div id="cal_workout" class="other">
+            <% end %>
+            <li><%= link_to_modal workout.name, show_workout_path(workout) %></li>
+            </div>
           <% end %>
-          <li><%= link_to_modal workout.name, show_workout_path(workout) %></li>
-          </div>
-        <% end %>
-      </ul>
+        </ul>
+    <% end %>
   <% end %>
-<% end %>
 
+  </div>
 </div>
 
 <div id="demo-form" class="demo-description" style="display: none; ">

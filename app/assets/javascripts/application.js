@@ -18,5 +18,5 @@
 //= require_tree .
 
 $(function() {
-  $('.datepicker').datepicker();
+  $('.datepicker').datepicker({ dateFormat: 'dd/mm/yy' });
 });

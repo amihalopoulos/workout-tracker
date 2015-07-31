@@ -23,13 +23,13 @@
 
 <div id="calendar_header">
   <h2 id="month">
-    <%= button_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m"), :method => "get" %>
+    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m"), :method => "get" %>
     <%=h @date.strftime("%B %Y") %>
-    <%= button_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m"), :method => "get" %>
+    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m"), :method => "get" %>
   </h2>
 </div>
-<div id="calender">
-<%= calendar_for @user.workouts, :year => @date.year, :month => @date.month do |t| %>
+<div id="calendar">
+<%= calendar_for @user.workouts, :year => @date.year, :month => @date.month, id: "main_cal" do |t| %>
   <%= t.head( 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat') %>
   <%= t.day do |day, workouts| %>
     <%= day.day %>

@@ -273,3 +273,24 @@ h1 span, h1 span a {
 .shoulders { background-color: orange; }
 .abs { background-color: purple; }
 .other { background-color: #DDD; }
+
+.modal {
+  border: 5px solid #777;
+}
+.sets_table{
+  border: 2px solid #777;
+  float: left;
+}
+.sets_table td {
+  padding: 5px;
+}
+.sets_table th {
+  text-decoration: underline;
+}
+.sets_table tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}
+
+.exercise_list {
+  margin:0 auto
+}

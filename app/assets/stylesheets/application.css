@@ -292,5 +292,11 @@ h1 span, h1 span a {
 }
 
 .exercise_list {
-  margin:0 auto
+  margin-left: auto;
+  margin-left: auto
+}
+
+.forms_area {
+  bottom: 0;
+  clear: left;
 }

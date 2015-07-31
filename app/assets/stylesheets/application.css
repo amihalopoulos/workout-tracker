@@ -33,6 +33,7 @@ html {
   margin-left: 1%;*/
 }
 
+
 #calendar table td,
 #calendar table th {
   font-family: "Lucida Grande",arial,helvetica,sans-serif;
@@ -156,7 +157,8 @@ nav a {
 #calendar_header {
  /*float: left;*/
  width: 60%;
- background-color: #DDD;
+ background-color: #79bbff;
+ color: #ffffff;
  text-align: center;
  /*margin: 1% 0 0 1%;*/
  margin-top: 10px;
@@ -165,6 +167,12 @@ nav a {
  border: 1px solid #999;
  border-radius: 2px;
 }
+
+#calendar_header a {
+  text-decoration: none;
+  color: white;
+}
+#calendar_header a:hover { color: #777;}
 
 #workout_create_container {
   text-align: center;
@@ -245,3 +253,12 @@ h1 span, h1 span a {
   font-size: 12px;
   text-decoration: none;
 }
+
+#cal_workout a { color: white; font-size: 20px;}
+
+.chest { background-color: red;}
+.back{ background-color: blue; }
+.legs { background-color: green; }
+.arms { background-color: yellow; }
+.shoulders { background-color: orange; }
+.abs { background-color: purple; }

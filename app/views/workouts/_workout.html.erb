@@ -4,9 +4,9 @@
   <p><%= link_to "Add Exercise", new_user_workout_exercise_path(@workout.user, @workout), remote: true, id: "new_exercise_link" %></p>
 </div>
 <div class="exercise_list">
-    <h4>Exercises</h4>
-    <% @workout.exercises.each do |exercise| %>
-      <%= render exercise %>
-    <% end %>
-  </div>
+  <h4>Exercises</h4>
+  <% @workout.exercises.each do |exercise| %>
+    <%= render exercise %>
+  <% end %>
+</div>
 

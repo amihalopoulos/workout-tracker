@@ -48,8 +48,10 @@
               <div id="cal_workout" class="shoulders">
             <% when "abs" %>
               <div id="cal_workout" class="abs">
+            <% else %>
+              <div id="cal_workout" class="other">
           <% end %>
-          <li><%= link_to workout.name, user_workout_path(workout.user, workout) %></li>
+          <li><%= link_to_modal workout.name, show_workout_path(workout) %></li>
           </div>
         <% end %>
       </ul>

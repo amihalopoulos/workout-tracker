@@ -15,7 +15,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @recent_workouts = @user.workouts.order('created_at DESC').limit(4)
+    @recent_workouts = @user.workouts.where(:date => 1.week.ago.beginning_of_day..Time.now).order('date DESC')
+    # @recent_workouts = @user.workouts.order('date DESC').limit(4)
     @date = params[:month] ? Date.parse(params[:month] + '-01') : Date.today
   end
 

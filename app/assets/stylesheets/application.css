@@ -158,7 +158,7 @@ nav a:hover {
 #user_info {
   float: left;
   width: 35%;
-  height: 600px;
+  height: 605px;
   background-color: #DDD;
   border: 5px solid #777;
  /* margin-left: 1%;*/
@@ -172,7 +172,7 @@ nav a:hover {
 }
 
 #user_image img {
-  height: 200px;
+  height: 180px;
   width: auto;
   padding: 10px 0 0 10px;
   display: block;

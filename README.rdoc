@@ -40,11 +40,12 @@ LOGISTICS
     -drop set/rest-pause
 
     TODO:
-    -Order set tables better on modal
+    -Fix layout of set tables better on modal
     -edit forms with ajax
     -User stuff
       -streak
       -picture
       -fix past week styling of date
       -points
+    -Graphs/Stats
 

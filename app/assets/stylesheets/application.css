@@ -270,6 +270,8 @@ h1 span, h1 span a {
 
 #cal_workout a { color: white; font-size: 20px; text-shadow: 0 0 1px #000000;}
 
+#cal_workout a:hover { color: #777;}
+
 .chest { background-color: red;}
 .back{ background-color: blue; }
 .legs { background-color: green; }

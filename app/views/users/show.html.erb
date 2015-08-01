@@ -10,7 +10,7 @@
   <div id="this_week">
     <h1>Past Week:</h1>
     <% @recent_workouts.each do |workout| %>
-      <p>You completed <%= workout.name %> workout on <%= workout.date %></p>
+      <p><%= "Completed #{workout.name} workout #{time_ago_in_words(workout.date)} ago" %></p>
     <% end %>
     <!-- <p><%= link_to "Add New Workout", new_user_workout_path(user_id: @user.id) %></p> -->
     <p><%= link_to_modal "Add New Workout", "#demo-form", :class=>"button" %></p>

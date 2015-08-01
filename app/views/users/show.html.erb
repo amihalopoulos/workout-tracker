@@ -6,7 +6,7 @@
 
   </div>
   <div id="this_week">
-    <h1>Past Week:</h1>
+    <h4>Past Week:</h4>
     <% @recent_workouts.each do |workout| %>
       <p><%= "Completed #{workout.name} workout #{time_ago_in_words(workout.date)} ago" %></p>
     <% end %>

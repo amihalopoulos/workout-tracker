@@ -3,11 +3,11 @@
   </div>
   <div id="user_about">
     <h1><%= @user.name %></h1>
-
+    <%= "Streak: #{@streak}" %>
   </div>
   <div id="this_week">
     <h4>Past Week:</h4>
-    <%= "Streak: #{@streak}" %>
+
     <% @recent_workouts.each do |workout| %>
       <p><%= "Completed #{workout.name} workout #{time_ago_in_words(workout.created_at)} ago" %></p>
     <% end %>

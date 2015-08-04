@@ -1,7 +1,7 @@
 <%= table_for(exercise.rounds, :html => { :class => 'sets_table'}) do |t| %>
   <%= t.head do %>
     <%= t.r do %>
-      <th colspan="3"><%= exercise.name %></th>
+      <th colspan="3" style="background-color: #DDD;"><%= exercise.name %></th>
     <% end %>
     <%= t.r do %>
       <%= t.h('Set') %>

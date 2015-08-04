@@ -16,14 +16,6 @@ ActiveRecord::Schema.define(version: 20150803173902) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "body_categories", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "exercise_categories", force: :cascade do |t|
-    t.string  "name"
-    t.integer "body_category_id"
-  end
 
   create_table "exercises", force: :cascade do |t|
     t.text    "name",       null: false

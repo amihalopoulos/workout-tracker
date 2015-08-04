@@ -39,15 +39,21 @@ LOGISTICS
     -weight used
     -drop set/rest-pause
 
-    TODO:
-    -Fix layout of set tables better on modal
-    -edit forms with ajax
-    -User stuff
-      -streak
-      -picture
+    1. TODO:
+    -Adjust Modal (workout show and new)
+      1. Make modal wider and not as high on screen
+      2. Fix layout of set tables better on modal (should be fixed by #1)
+      3. Edit forms with ajax (make neater, maybe float labels left and inputs right)
+    2. Graphs/Stats
+    -be able to pick an exercise and see charts over times
+    -need to add user_id to exercise to find the data
+
+    3. User stuff
+      - x - streak
       -fix past week styling of date
-      -points
-    -Graphs/Stats
+      -points generator (1 point for new workout, 1 point for each exercise, 1 point for lifting new heavy blah)
+      -picture --not too important
+
 
     EXERCISES
       -probably best to have the list below

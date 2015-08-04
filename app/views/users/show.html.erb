@@ -3,12 +3,13 @@
   </div>
   <div id="user_about">
     <h1><%= @user.name %></h1>
-
+    <%= "Streak: #{@streak}" %>
   </div>
   <div id="this_week">
     <h4>Past Week:</h4>
+
     <% @recent_workouts.each do |workout| %>
-      <p><%= "Completed #{workout.name} workout #{time_ago_in_words(workout.date)} ago" %></p>
+      <p><%= "Completed #{workout.name} workout #{time_ago_in_words(workout.created_at)} ago" %></p>
     <% end %>
     <!-- <p><%= link_to "Add New Workout", new_user_workout_path(user_id: @user.id) %></p> -->
     <p><%= link_to_modal "Add New Workout", "#demo-form", :class=>"button" %></p>

@@ -251,6 +251,8 @@ form input { float: right; }
 
 #workout_header {
   width: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
 #workout_header {
   background-color: #DDD;
@@ -298,7 +300,8 @@ h1 span, h1 span a {
 
 .exercise_list {
   margin-left: auto;
-  margin-left: auto
+  width: 100%;
+  display: inline-block;
 }
 
 .forms_area {

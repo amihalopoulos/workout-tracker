@@ -308,7 +308,7 @@ h1 span, h1 span a {
   width: 60%;
 }
 
-#signup_form {
+.user_form {
   width: 40%;
   background-color: #DDD;
   text-align: center;

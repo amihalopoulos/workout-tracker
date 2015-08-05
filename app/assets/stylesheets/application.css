@@ -304,6 +304,10 @@ h1 span, h1 span a {
   display: inline-block;
 }
 
+.exercise_create_container {
+  width: 60%;
+}
+
 .forms_area {
   bottom: 0;
   clear: left;

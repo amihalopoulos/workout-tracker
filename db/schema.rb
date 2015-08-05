@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150803173902) do
+ActiveRecord::Schema.define(version: 20150805005352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-
   create_table "exercises", force: :cascade do |t|
     t.text    "name",       null: false
     t.integer "workout_id", null: false
+    t.integer "user_id"
   end
+
+  add_index "exercises", ["user_id"], name: "index_exercises_on_user_id", using: :btree
 
   create_table "rounds", force: :cascade do |t|
     t.integer "reps",        null: false
@@ -44,4 +46,5 @@ ActiveRecord::Schema.define(version: 20150803173902) do
     t.datetime "updated_at"
   end
 
+  add_foreign_key "exercises", "users"
 end

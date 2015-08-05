@@ -36,6 +36,6 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.require(:exercise).permit(:name)
+    params.require(:exercise).permit(:name, :user_id).merge(user_id: current_user.id)
   end
 end

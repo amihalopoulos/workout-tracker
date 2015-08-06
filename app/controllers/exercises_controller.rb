@@ -23,10 +23,6 @@ class ExercisesController < ApplicationController
     end
   end
 
-  def index
-    @exercises = current_user.exercises
-  end
-
   def show
     # @user = User.find(params[:id])
     @exercise = Exercise.find(params[:id])
@@ -35,6 +31,15 @@ class ExercisesController < ApplicationController
   def edit
     # @user = User.find(params[:id])
     @workout = Workout.find(params[:id])
+  end
+
+  def chart
+    @exercise = Exercise.find(params[:id])
+    @exercises = Exercise.where(name: @exercise.name, user_id: current_user.id)
+  end
+
+   def index
+    @exercises = current_user.exercises
   end
 
   private

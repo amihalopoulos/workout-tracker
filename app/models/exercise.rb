@@ -12,7 +12,7 @@ class Exercise < ActiveRecord::Base
         array_of_avgs << round.one_rep_average
       end
       one_rep_max = (array_of_avgs.inject{ |sum, el| sum + el }.to_f / array_of_avgs.size)
-      dataset << {'weight' => one_rep_max, 'date' => exercise.workout.created_at}
+      dataset << {'weight' => one_rep_max, 'date' => exercise.workout.date}
     end
     return dataset
   end

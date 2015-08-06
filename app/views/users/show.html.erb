@@ -35,23 +35,8 @@
       <%= day.day %>
         <ul>
           <% for workout in workouts %>
-            <% case workout.name.downcase %>
-              <% when "chest" %>
-                <div id="cal_workout" class="chest">
-              <% when "back" %>
-                <div id="cal_workout" class="back">
-              <% when "arms" %>
-                <div id="cal_workout" class="arms">
-              <% when "legs" %>
-                <div id="cal_workout" class="legs">
-              <% when "shoulders" %>
-                <div id="cal_workout" class="shoulders">
-              <% when "abs" %>
-                <div id="cal_workout" class="abs">
-              <% else %>
-                <div id="cal_workout" class="other">
-            <% end %>
-            <li><%= link_to_modal workout.name, show_workout_path(workout) %></li>
+            <div class="cal_workout <%= workout.name.downcase %>">
+              <li><%= link_to_modal workout.name, show_workout_path(workout) %></li>
             </div>
           <% end %>
         </ul>

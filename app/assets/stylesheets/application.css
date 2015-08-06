@@ -278,7 +278,7 @@ h1 span, h1 span a {
   box-shadow: 0 10px 6px -6px #777;
   padding-bottom: 5px;
 }
-
+.cal_workout a:hover { color: #777;}
 .cal_workout li {}
 
 .chest { background-color: red; border-radius: 5px;}

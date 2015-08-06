@@ -23,6 +23,10 @@ class ExercisesController < ApplicationController
     end
   end
 
+  def index
+    @exercises = current_user.exercises
+  end
+
   def show
     # @user = User.find(params[:id])
     @exercise = Exercise.find(params[:id])

@@ -41,16 +41,16 @@ LOGISTICS
 
     1. TODO:
     -Adjust Modal (workout show and new)
-      1. Make modal wider and not as high on screen
+      X 1. Make modal wider and not as high on screen
       2. Fix layout of set tables better on modal (should be fixed by #1)
       3. Edit forms with ajax (make neater, maybe float labels left and inputs right)
     2. Graphs/Stats
-    -1RPM algorithm: lifted*(1/(1.0278-(reps*.0278)))
-    -be able to pick an exercise and see charts over times
-    -need to add user_id to exercise to find the data
+      X -1RPM algorithm: lifted*(1/(1.0278-(reps*.0278)))
+      X -be able to pick an exercise and see charts over times
+      X -need to add user_id to exercise to find the data
 
     3. User stuff
-      - x - streak
+      X - streak
       -fix past week styling of date
       -points generator (1 point for new workout, 1 point for each exercise, 1 point for lifting new heavy blah)
       -picture --not too important

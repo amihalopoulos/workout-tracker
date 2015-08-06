@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_many :workouts
+  has_many :exercises
 
   def worked_out_this_day(day)
     self.workouts.where(date: day).count > 0 ? true : false

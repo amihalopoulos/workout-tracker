@@ -269,17 +269,25 @@ h1 span, h1 span a {
   text-decoration: none;
 }
 
-#cal_workout a { color: white; font-size: 20px; text-shadow: 0 0 1px #000000;}
+.cal_workout a { color: white; font-size: 20px; text-shadow: 0 0 1px #000000; }
+.cal_workout li {
+  border: 1px outset black;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  padding-bottom: 5px;
+}
 
-#cal_workout a:hover { color: #777;}
+.cal_workout li {}
 
-.chest { background-color: red;}
-.back{ background-color: blue; }
-.legs { background-color: green; }
-.arms { background-color: yellow; }
-.shoulders { background-color: orange; }
-.abs { background-color: purple; }
-.other { background-color: #DDD; }
+.chest { background-color: red; border-radius: 5px;}
+.back{ background-color: blue; border-radius: 5px;}
+.legs { background-color: green; border-radius: 5px;}
+.arms { background-color: yellow; border-radius: 5px;}
+.shoulders { background-color: orange; border-radius: 5px;}
+.abs { background-color: purple; border-radius: 5px;}
+.other { background-color: #DDD; border-radius: 5px;}
 
 .modal {
   border: 5px solid #777;

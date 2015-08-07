@@ -1,2 +1,2 @@
 $('.form').hide()
-$('.exercise_list').append("<%= j render @round.exercise %>")
+$('.exercise_list').html("<%= j render @round.exercise.workout.exercises %>")

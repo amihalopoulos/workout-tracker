@@ -39,7 +39,13 @@ class ExercisesController < ApplicationController
   end
 
    def index
-    @exercises = current_user.exercises
+    hash = {}
+    @exercises = current_user.exercises.index_by {|r| r[:name]}.values
+    @exercises.each do |e|
+      sets = e.rounds.count
+      hash[e] = sets
+    end
+    @hash = hash.sort_by {|key, value| value}.reverse
   end
 
   private

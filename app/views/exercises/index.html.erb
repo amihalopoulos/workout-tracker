@@ -1,0 +1,11 @@
+<div id="user_info" style="height: 420px; ">
+<h2>Stats</h2>
+<% @hash.each do |exercise, value| %>
+  <p style="color: white;"><%= link_to exercise.name, chart_exercise_path(exercise), :class => 'chart_link', remote: true %></p>
+<% end %>
+</div>
+
+<div id="calendar_wrapper" style="background-color: #666666; text-align: center; color: #999999;">
+  <h4>See Workout by Workout Comparisons of Your Calculated 1RPM</h4>
+<div class="exercise_list" style="background-color: #336699; border: 5px solid #777"></div>
+</div>

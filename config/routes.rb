@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'workouts/(:workout_id)', to: 'workouts#show', as: :show_workout
 
+  get 'exercises/:id/chart', to: 'exercises#chart', as: :chart_exercise
+
   get 'signin' => 'sessions#new', as: 'signin'
   get 'signout' => 'sessions#destroy', as: 'signout'
   get 'signup' => 'users#new', as: 'signup'

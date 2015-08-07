@@ -1,0 +1,24 @@
+<%= @exercise.name %>
+
+<%= content_tag :div, "", id: "exercise_chart", data: {exercise: @exercise.get_one_rep_dataset} %>
+<div id="exercise_chart"></div>
+  <script>
+  new Morris.Line({
+  // ID of the element in which to draw the chart.
+  element: 'exercise_chart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+  data: $('#exercise_chart').data('exercise'),
+
+
+  // The name of the data record attribute that contains x-values.
+  xkey: 'date',
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['weight'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  labels: ['Calculated 1RPM']
+});
+
+  // console.log($('exercise_chart').data('exercise'))
+</script>

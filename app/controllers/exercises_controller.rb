@@ -33,9 +33,18 @@ class ExercisesController < ApplicationController
     @workout = Workout.find(params[:id])
   end
 
+  def chart
+    @exercise = Exercise.find(params[:id])
+    @exercises = Exercise.where(name: @exercise.name, user_id: current_user.id)
+  end
+
+   def index
+    @exercises = current_user.exercises
+  end
+
   private
 
   def exercise_params
-    params.require(:exercise).permit(:name)
+    params.require(:exercise).permit(:name, :user_id).merge(user_id: current_user.id)
   end
 end

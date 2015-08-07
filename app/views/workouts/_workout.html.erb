@@ -4,9 +4,7 @@
   <p></p>
 </div>
 <div class="exercise_list">
-  <% @workout.exercises.each do |exercise| %>
-    <%= render exercise %>
-  <% end %>
+  <%= render @workout.exercises %>
 </div>
 <p style="float: left;"><%= link_to "Add Exercise", new_user_workout_exercise_path(@workout.user, @workout), remote: true, id: "new_exercise_link" %></p>
 <div class="forms_area"></div>

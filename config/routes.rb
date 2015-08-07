@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resource :session, :only => [:new, :create, :destroy]
 
   get 'workouts/(:workout_id)', to: 'workouts#show', as: :show_workout
+  get 'users/:id/exercises', to: 'exercises#index', as: :user_exercises
 
   get 'exercises/:id/chart', to: 'exercises#chart', as: :chart_exercise
 

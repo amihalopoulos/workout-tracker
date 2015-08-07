@@ -298,10 +298,16 @@ h1 span, h1 span a {
 }
 .sets_table td {
   padding: 5px;
+  height: 20px;
 }
 .sets_table th {
   text-decoration: underline;
 }
+
+.sets_table .ex_title {
+  height: 30px;
+}
+
 .sets_table tbody tr:nth-child(odd) {
    background-color: #ccc;
 }

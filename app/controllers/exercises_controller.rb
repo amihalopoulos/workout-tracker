@@ -29,11 +29,22 @@ class ExercisesController < ApplicationController
   end
 
   def edit
-    # @user = User.find(params[:id])
     @exercise = Exercise.find(params[:id])
     respond_to do |format|
       format.html { redirect_to user_path(@user) }
       format.js
+    end
+  end
+
+  def update
+    @exercise = Exercise.find(params[:id])
+    if @exercise.update_attributes(exercise_params)
+      respond_to do |format|
+        format.html { redirect_to user_path(@exercise.user) }
+        format.js
+      end
+    else
+      redirect_to user_path(@exercise.user)
     end
   end
 
@@ -55,6 +66,6 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.require(:exercise).permit(:name, :user_id).merge(user_id: current_user.id)
+    params.require(:exercise).permit(:name, :user_id, round: [:reps, :weight]).merge(user_id: current_user.id)
   end
 end

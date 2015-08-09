@@ -337,3 +337,21 @@ h1 span, h1 span a {
   bottom: 0;
   clear: left;
 }
+
+#workout_edit {
+width:100px;
+margin: 0 auto;
+padding-bottom: 45px;
+color:#fff;
+font-family: Tahoma, Geneva, sans-serif;
+height:30px;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border: 1p solid #999;
+}
+
+#workout_edit input {
+  height: 20px;
+  margin-bottom: 5px;
+}

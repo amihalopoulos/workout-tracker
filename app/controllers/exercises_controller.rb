@@ -30,7 +30,11 @@ class ExercisesController < ApplicationController
 
   def edit
     # @user = User.find(params[:id])
-    @workout = Workout.find(params[:id])
+    @exercise = Exercise.find(params[:id])
+    respond_to do |format|
+      format.html { redirect_to user_path(@user) }
+      format.js
+    end
   end
 
   def chart

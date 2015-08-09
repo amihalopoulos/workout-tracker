@@ -1,0 +1,7 @@
+<div id="workout_edit">
+  <%= form_for @workout, url: user_workout_path(@workout.user, @workout), remote: true do |f| %>
+      <%= f.text_field :name %>
+      <%= f.text_field :date, class: "datepicker" %>
+      <%= f.submit 'Save', id: "workout_submit" %>
+  <% end %>
+</div>

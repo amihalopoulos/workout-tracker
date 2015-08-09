@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/amihalopoulos/jquery-modal-rails
-  revision: fd6e6b1133ecb0f5c2bd7280133077d08db4af38
+  revision: 02bb82c3bcb1feb5b43e9b2b927003d0ad4b5d1b
   specs:
     jquery-modal-rails (0.0.4)
       jquery-ui-rails

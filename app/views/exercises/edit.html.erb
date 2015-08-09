@@ -1,0 +1,28 @@
+<%= form_for @exercise, url: user_workout_exercises_path, id: "new_exercise_link" do |f| %>
+
+<%= table_for(@exercise.rounds, :html => { :class => 'sets_table'}) do |t| %>
+  <%= t.head do %>
+    <%= t.r do %>
+      <th colspan="3" class="ex_title"> <%= f.text_field :name %></th>
+    <% end %>
+    <%= t.r do %>
+      <%= t.h('Set') %>
+      <%= t.h('Reps') %>
+      <%= t.h('Weight') %>
+    <% end %>
+  <% end %>
+  <% x = 1 %>
+  <%= f.fields_for :rounds do |ff| %>
+  <%= t.body do |round| %>
+    <%= t.r do %>
+      <%= t.d("Set #{x}") %>
+
+      <%= t.d(h(ff.text_field :reps)) %>
+      <%= t.d(ff.text_field :weight) %>
+      <% x +=1 %>
+    <% end %>
+    <% end %>
+  <% end %>
+  <th colspan="3"><%= f.submit 'Submit' %></th>
+<% end %>
+<% end %>

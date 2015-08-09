@@ -1,5 +1,5 @@
-<div id="user_info" style="height: 420px; ">
-<h2>Stats</h2>
+<div id="user_info" style="height: 420px; text-align: center;">
+<h2>Exercises you've Completed</h2>
 <% @hash.each do |exercise, value| %>
   <p style="color: white;"><%= link_to exercise.name, chart_exercise_path(exercise), :class => 'chart_link', remote: true %></p>
 <% end %>

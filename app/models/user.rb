@@ -16,4 +16,13 @@ class User < ActiveRecord::Base
     streak += 1 if self.worked_out_this_day(Date.today)
     return streak
   end
+
+  def workouts_this_month
+    self.workouts.where(:date => Date.today.beginning_of_month..Date.today).count
+  end
+
+  def workouts_this_week
+    self.workouts.where(:date => Date.today.beginning_of_week-1..Date.today).count
+  end
+
 end

@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/amihalopoulos/jquery-modal-rails
-  revision: 0234a8327d612e947ed96eeaf2f47fd5a6495997
+  revision: 02bb82c3bcb1feb5b43e9b2b927003d0ad4b5d1b
   specs:
     jquery-modal-rails (0.0.4)
       jquery-ui-rails
@@ -83,7 +83,7 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.6.1)
     mini_portile (0.6.2)
-    minitest (5.7.0)
+    minitest (5.8.0)
     multi_json (1.11.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)

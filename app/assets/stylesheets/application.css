@@ -19,23 +19,33 @@
 html {
   /*text-align: center;*/
   font-family:sans-serif;
+  background: url('http://www.canyourezist.com/img/banner-bg.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #464646;
 }
 #container {
   padding: 60px;
 
 }
+
 nav {
   position: fixed;
   height: 50px;
   border-radius: 5px;
   margin: 0 auto;
   /*border-left: 6px solid #777;*/
-  border-bottom: 6px solid #777;
+  border-bottom: 10px solid #336699;
   border-radius: 15px;
-  background-color: #DDD;
+  background-color: #777;
   right: 0;
   left: 0;
-  top: 0;
+  top: 2px;
   margin-right: auto;
   margin-left: auto;
   width: 90%;
@@ -51,7 +61,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #777;
+  color: #DDD;
 }
 
 nav a:hover {
@@ -68,10 +78,10 @@ nav a:hover {
   margin-right: 1%;
 }
 
-#calendar_header {
+.box_header {
  /*float: left;*/
  width: 100%;
- background-color: #79bbff;
+ background-color: #336699;
  color: #ffffff;
  text-shadow: 0 0 1px #000000;
  text-align: center;
@@ -79,15 +89,15 @@ nav a:hover {
  /*margin-top: 10px;
  margin-left: auto;
  margin-right: auto;*/
- border: 1px solid #999;
+ border: 1px solid #336699;
  border-radius: 2px;
 }
 
-#calendar_header a {
+.box_header a {
   text-decoration: none;
   color: white;
 }
-#calendar_header a:hover { color: #777;}
+.box_header a:hover { color: #777;}
 
 #calendar table {
   border-collapse: collapse;
@@ -107,21 +117,22 @@ nav a:hover {
 }
 
 #calendar table th {
-  background: #DDD;
+  background: #999999;
   color: #666;
   text-align: center;
   width: 14.2857142857143%;
+  font-size: 2em;
 }
 #calendar table td {
-  background: #FFF;
-  color: #777;
-  height: 90px;
+  background: #666666;
+  color: #ffffff;
+  height: 70px;
   vertical-align: top;
   font-size: 16px;
 }
 
 #calendar table .notmonth {
-  color: #CCC;
+  color: #DDD;
 }
 
 #calendar table #month {
@@ -138,7 +149,7 @@ nav a:hover {
 }
 
 #calendar table .today {
-  background-color: #D7F2FF;
+  background-color: #336699;
 }
 
 #calendar table ul {
@@ -159,13 +170,15 @@ nav a:hover {
   float: left;
   width: 35%;
   height: 605px;
-  background-color: #DDD;
+  background-color: #666666;
+  color: #ffffff;
   border: 5px solid #777;
  /* margin-left: 1%;*/
    margin-left: 1%;
   margin-right: auto;
   border-radius: 15px;
   overflow: auto;
+  text-align: center;
 }
 #user_image {
   float: left
@@ -176,11 +189,6 @@ nav a:hover {
   width: auto;
   padding: 10px 0 0 10px;
   display: block;
-}
-
-#user_about {
-  margin-left: 10px;
-  float: left;
 }
 
 #this_week {
@@ -269,7 +277,7 @@ h1 span, h1 span a {
   text-decoration: none;
 }
 
-.cal_workout a { color: white; font-size: 20px; text-shadow: 0 0 1px #000000; }
+.cal_workout a { color: white; font-size: 14px; text-shadow: 0 0 1px #000000; }
 .cal_workout li {
   border: 1px outset black;
   border-radius: 5px;
@@ -279,7 +287,6 @@ h1 span, h1 span a {
   padding-bottom: 5px;
 }
 .cal_workout a:hover { color: #777;}
-.cal_workout li {}
 
 .chest { background-color: red; border-radius: 5px;}
 .back{ background-color: blue; border-radius: 5px;}
@@ -295,6 +302,9 @@ h1 span, h1 span a {
 .sets_table{
   border: 2px solid #777;
   float: left;
+  width: 100%;
+  text-align: center;
+  margin: 5px auto;
 }
 .sets_table td {
   padding: 5px;
@@ -306,6 +316,11 @@ h1 span, h1 span a {
 
 .sets_table .ex_title {
   height: 30px;
+  background-color: #336699;
+
+}
+.sets_table .ex_title a {
+  color: white;
 }
 
 .sets_table tbody tr:nth-child(odd) {
@@ -323,10 +338,12 @@ h1 span, h1 span a {
 }
 
 .form {
-  width: 40%;
-  background-color: #DDD;
+  width: 30%;
+  background-color:rgba(0,0,0,0.5);
   text-align: center;
   margin: auto;
+  color: white;
+  margin-top: 10%;
   border-radius: 10px;
   padding: 15px;
 }
@@ -335,3 +352,44 @@ h1 span, h1 span a {
   bottom: 0;
   clear: left;
 }
+
+#workout_edit {
+width:100px;
+margin: 0 auto;
+padding-bottom: 45px;
+color:#fff;
+font-family: Tahoma, Geneva, sans-serif;
+height:30px;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border: 1p solid #999;
+}
+
+#workout_edit input {
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.ex_name {
+  display: inline-block;
+  background-color: #777;
+  padding: 5px;
+}
+.content {
+  white-space: nowrap;
+  overflow: scroll;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+.stats {
+  width: 100%;
+  text-align: left;
+
+}
+.stats tbody tr td {
+  border-bottom: 1px solid white;
+  padding: 10px;
+}
+

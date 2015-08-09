@@ -1,17 +1,15 @@
 <div id="user_info">
-  <div id="user_image"><img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAKtAAAAJGRlNTY2OGUxLTRkOWYtNDQ4Ny1hN2I4LTM0NzhhMTYyOGQyNQ.jpg" alt="" id="user_pic">
-  </div>
   <div id="user_about">
-    <h1><%= @user.name %></h1>
-    <%= "Streak: #{@streak}" %>
-  </div>
-  <div id="this_week">
-    <h4>Past Week:</h4>
+    <div class="box_header"><h2><%= @user.name %></h2></div>
+    <%= table_for @stats, :html => { :class => 'stats'} do |t| %>
+      <%= t.body do |x, stat| %>
+        <%= t.r do %>
+          <%= t.d(x) %>
+          <%= t.d(stat) %>
 
-    <% @recent_workouts.each do |workout| %>
-      <p><%= "Completed #{workout.name} workout #{time_ago_in_words(workout.created_at)} ago" %></p>
+        <% end %>
+      <% end %>
     <% end %>
-    <!-- <p><%= link_to "Add New Workout", new_user_workout_path(user_id: @user.id) %></p> -->
     <p><%= link_to_modal "Add New Workout", "#demo-form", :class=>"button" %></p>
 
   </div>
@@ -20,7 +18,7 @@
 
 
 <div id="calendar_wrapper">
-  <div id="calendar_header">
+  <div class="box_header">
     <h2 id="month">
       <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m"), :method => "get" %>
       <%=h @date.strftime("%B %Y") %>

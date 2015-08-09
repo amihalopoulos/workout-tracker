@@ -29,6 +29,18 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
   end
 
+  def update
+    @workout = Workout.find(params[:id])
+    if @workout.update(workout_params)
+      respond_to do |format|
+        format.html { redirect_to user_path(@workout.user) }
+        format.js
+      end
+    else
+      redirect_to user_path(user)
+    end
+  end
+
   private
 
   def workout_params

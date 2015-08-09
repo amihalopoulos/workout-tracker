@@ -2,6 +2,10 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    respond_to do |format|
+      format.html { redirect_to signup_path(@user) }
+      format.js
+    end
   end
 
   def create

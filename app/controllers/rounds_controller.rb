@@ -25,6 +25,14 @@ class RoundsController < ApplicationController
     @round = Round.find(params[:id])
   end
 
+  def edit
+    @round = Round.find(params[:id])
+  end
+
+  def update
+
+  end
+
   private
 
   def round_params

@@ -5,12 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+   <%= stylesheet_link_tag "welcome" if controller_name == "application" && action_name == "index" %>
 </head>
 <body>
+  <% unless controller_name == "application" && action_name == "index" %>
   <nav class="navbar">
     <ul>
       <% if current_user %>
-        <li><%= link_to "Profile", user_path(current_user) %></li>
+        <li><%= link_to "Schedule", user_path(current_user) %></li>
         <li><%= link_to "Stats", user_exercises_path %></li>
         <li><%= link_to "About" %></li>
         <li><%= link_to "Log Out", signout_path %></li>
@@ -20,6 +22,7 @@
       <li></li>
     </ul>
   </nav>
+  <% end %>
   <div id="container">
     <%= yield %>
   </div>

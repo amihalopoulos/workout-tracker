@@ -72,7 +72,7 @@ nav a:hover {
   /*float: right;*/
   width: 60%;
   float: right;
-  border: 5px solid #777;
+  /*border: 5px solid #777;*/
   border-radius: 15px;
   overflow: auto;
   margin-right: 1%;
@@ -125,6 +125,7 @@ nav a:hover {
 }
 #calendar table td {
   background: #666666;
+  background-color:rgba(117,117,117,0.5);
   color: #ffffff;
   height: 70px;
   vertical-align: top;
@@ -165,14 +166,29 @@ nav a:hover {
   font-size: 11px;
   text-align: center;
 }
+#calendar table tr:first-child th {
+  border-top: 0;
+}
+#calendar table tr:last-child td {
+  border-bottom: 0;
+}
+#calendar table tr td:first-child,
+#calendar table tr th:first-child {
+  border-left: 0;
+}
+#calendar table tr td:last-child,
+#calendar table tr th:last-child {
+  border-right: 0;
+}
 
 #user_info {
   float: left;
   width: 35%;
   height: 605px;
   background-color: #666666;
+  background-color:rgba(117,117,117,0.5);
   color: #ffffff;
-  border: 5px solid #777;
+  /*border: 5px solid #777;*/
  /* margin-left: 1%;*/
    margin-left: 1%;
   margin-right: auto;
@@ -428,3 +444,21 @@ font-size: 12px;
 margin-left: 70%;
 padding: 2px;
 }
+#about_page {
+  background-color:rgba(117,117,117,0.5);
+  width: 100%;
+  border-radius: 15px;
+  margin: 5px auto;
+  color: #fff;
+  overflow: auto;
+  text-align: center;
+}
+#about_text {
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+}
+
+
+
+

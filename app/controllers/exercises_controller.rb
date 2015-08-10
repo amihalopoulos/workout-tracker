@@ -66,7 +66,10 @@ class ExercisesController < ApplicationController
   def destroy
     @exercise = Exercise.find(params[:id])
     @exercise.destroy
-    redirect_to user_path(current_user)
+    respond_to do |format|
+      format.html { redirect_to user_path(current_user) }
+      format.js
+    end
   end
 
   private

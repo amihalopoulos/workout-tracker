@@ -63,9 +63,15 @@ class ExercisesController < ApplicationController
     @hash = hash.sort_by {|key, value| value}.reverse
   end
 
+  def destroy
+    @exercise = Exercise.find(params[:id])
+    @exercise.destroy
+    redirect_to user_path(current_user)
+  end
+
   private
 
   def exercise_params
-    params.require(:exercise).permit(:name, :user_id, rounds_attributes: [:id, :reps, :weight]).merge(user_id: current_user.id)
+    params.require(:exercise).permit(:name, :user_id, rounds_attributes: [:id, :reps, :weight, :_destroy]).merge(user_id: current_user.id)
   end
 end

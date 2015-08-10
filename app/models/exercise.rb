@@ -3,6 +3,8 @@ class Exercise < ActiveRecord::Base
   belongs_to :user
   has_many :rounds
 
+  accepts_nested_attributes_for :rounds, allow_destroy: true
+
   def get_one_rep_dataset
     exercises = Exercise.where(name: self.name, user_id: self.user_id)
     dataset= Array.new

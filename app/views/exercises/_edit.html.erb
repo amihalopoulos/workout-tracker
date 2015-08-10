@@ -1,0 +1,25 @@
+<div class="edit_form">
+<%= form_for @exercise, url: user_workout_exercise_path(@exercise.workout.user, @exercise.workout, @exercise), remote: true do |f| %>
+<div class="edit_header"> <%= f.text_field :name %></div>
+<div id="edit_subhead">
+  <span>Set</span>
+  <span>Reps</span>
+  <span>Weight</span>
+</div>
+<% @exercise.rounds.each.with_index do |round,index| %>
+  <%= f.fields_for :rounds, round do |ff| %>
+    <div class="edit_row">
+    <%= "Set #{index+1}: " %>
+    <div class="edit_pairs">
+    <%= ff.text_field :weight %>
+    <%= ff.text_field :reps %>
+
+    </div>
+    </div>
+  <% end %>
+
+  <% end %>
+  <%= f.submit 'Submit', :class => "button edit_button" %>
+
+<% end %>
+</div>

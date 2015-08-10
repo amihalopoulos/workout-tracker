@@ -271,11 +271,6 @@ form input { float: right; }
 }
 #workout_header p { margin-top: -20px;}
 
-h1 span, h1 span a, .ex_title span a {
-  font-size: 12px;
-  text-decoration: none;
-}
-
 .cal_workout a { color: white; font-size: 14px; text-shadow: 0 0 1px #000000; }
 .cal_workout li {
   border: 1px outset black;
@@ -309,17 +304,20 @@ h1 span, h1 span a, .ex_title span a {
   padding: 5px;
   height: 20px;
 }
-.sets_table th {
-  text-decoration: underline;
-}
 
 .sets_table .ex_title {
   height: 30px;
   background-color: #336699;
 
 }
-.sets_table .ex_title a {
+.link_to_chart {
   color: white;
+  text-decoration: underline;
+}
+
+h1 span, h1 span a, .ex_title span a {
+  font-size: 12px;
+  text-decoration: none;
 }
 
 .sets_table tbody tr:nth-child(odd) {

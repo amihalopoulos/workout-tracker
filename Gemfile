@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'high_voltage', '~> 2.4.0'
+
 #for the calender
 gem "watu_table_builder", :require => "table_builder"
 

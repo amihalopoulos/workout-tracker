@@ -1,5 +1,5 @@
 html {
-  background: url(' http://swolegeneration.com/wp-content/uploads/2015/03/arnold.jpg');
+  background: url('http://www.canyourezist.com/img/banner-bg.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -11,7 +11,7 @@ html {
 }
 
 #form {
-  background-color:rgba(0,0,0,0.5);
+  background-color:rgba(117,117,117,0.5);
   text-align: center;
   padding: 15px;
   width: 30%;
@@ -23,6 +23,8 @@ html {
 
 #form a {
   color: white;
+  font-weight: bold;
+  text-decoration: none;
   width: 100%;
   display: block;
   padding-bottom: 5px;

@@ -6,7 +6,7 @@
           <%= link_to "EDIT", edit_user_workout_exercise_path(exercise.workout.user, exercise.workout, exercise), class: "edit_link", remote: true %>
         </span>
         <span>
-          <%= link_to "DELETE", user_workout_exercise_path(exercise.workout.user, exercise.workout, exercise), method: :delete, data: {confirm: 'Are you sure?'} %>
+          <%= link_to "DELETE", user_workout_exercise_path(exercise.workout.user, exercise.workout, exercise), method: :delete, data: {confirm: 'Are you sure?'}, remote: true %>
         </span>
       </th>
     <% end %>

@@ -4,17 +4,18 @@
 <div id="edit_subhead">
   <span>Set</span>
   <span>Reps</span>
-  <span>Weight</span>
+  <span>Weight   Delete</span>
 </div>
 <% @exercise.rounds.each.with_index do |round,index| %>
   <%= f.fields_for :rounds, round do |ff| %>
     <div class="edit_row">
     <%= "Set #{index+1}: " %>
     <div class="edit_pairs">
+    <%= ff.check_box :_destroy %>
     <%= ff.text_field :weight %>
     <%= ff.text_field :reps %>
-
     </div>
+
     </div>
   <% end %>
 

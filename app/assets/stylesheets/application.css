@@ -70,7 +70,7 @@ nav a:hover {
 
 #calendar_wrapper {
   /*float: right;*/
-  width: 60%;
+  width: 62%;
   float: right;
   /*border: 5px solid #777;*/
   border-radius: 15px;
@@ -109,19 +109,19 @@ nav a:hover {
 }
 
 #calendar table td,
-#calendar table th {
+#calendar table th, .div_sub_head {
   font-family: "Lucida Grande",arial,helvetica,sans-serif;
   font-size: 10px;
   padding: 6px;
   border: 1px solid #999;
-}
-
-#calendar table th {
   background: #999999;
   color: #666;
   text-align: center;
   width: 14.2857142857143%;
   font-size: 2em;
+}
+.div_sub_head {
+  width: 100%;
 }
 #calendar table td {
   background: #666666;
@@ -458,7 +458,14 @@ padding: 2px;
   margin: auto;
   font-size: 20px;
 }
-
-
-
-
+.user {
+  width: 30%;
+}
+.error_messages {
+  width: 90%;
+  margin: 0 ;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.error_messages ul { list-style: none; margin-bottom: 0;}
+.error_messages ul li { background-color:rgba(215,44,44,0.7); margin-bottom: 5px;}

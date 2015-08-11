@@ -19,7 +19,7 @@
 html {
   /*text-align: center;*/
   font-family:sans-serif;
-  background: url('http://www.canyourezist.com/img/banner-bg.png');
+  background: url('banner-bg.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

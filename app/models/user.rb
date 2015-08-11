@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_many :workouts
   has_many :exercises
 
+  validates_uniqueness_of :email
+
   def worked_out_this_day(day)
     self.workouts.where(date: day).count > 0 ? true : false
   end

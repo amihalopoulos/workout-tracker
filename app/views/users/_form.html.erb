@@ -1,6 +1,16 @@
-<div class="form">
+<div class="form user">
   <%= form_for @user do |f| %>
     <h2>Sign Up</h2>
+
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
     <div class="input_label_pair">
         <%= f.label :name, "Username: " %>
         <%= f.text_field :name %>

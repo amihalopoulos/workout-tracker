@@ -40,10 +40,16 @@ LOGISTICS
     -drop set/rest-pause
 
     1. TODO:
+    - error handling
+    -autocomplete
+    -redirect to user show (skip splash) if user is already signed in
+      1. for bad user signin/signup info
+    -refactor
+
     -Adjust Modal (workout show and new)
       X 1. Make modal wider and not as high on screen
-      2. Fix layout of set tables better on modal (should be fixed by #1)
-      3. Edit forms with ajax (make neater, maybe float labels left and inputs right)
+      X 2. Fix layout of set tables better on modal (should be fixed by #1)
+      X 3. Edit forms with ajax (make neater, maybe float labels left and inputs right)
     2. Graphs/Stats
       X -1RPM algorithm: lifted*(1/(1.0278-(reps*.0278)))
       X -be able to pick an exercise and see charts over times
@@ -51,9 +57,9 @@ LOGISTICS
 
     3. User stuff
       X - streak
-      -fix past week styling of date
+      X fix past week styling of date
       -points generator (1 point for new workout, 1 point for each exercise, 1 point for lifting new heavy blah)
-      -picture --not too important
+      X picture --not too important
 
 
     EXERCISES

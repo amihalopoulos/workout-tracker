@@ -13,7 +13,10 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to user_path(@user.id)
     else
-      redirect_to new_user_path
+    respond_to do |format|
+      format.html { render "new" }
+      format.js
+    end
     end
   end
 

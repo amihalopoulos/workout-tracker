@@ -8,17 +8,15 @@
    <%= stylesheet_link_tag "welcome" if controller_name == "application" && action_name == "index" %>
 </head>
 <body>
-  <% unless controller_name == "application" && action_name == "index" %>
-      <% if current_user %>
-        <nav class="navbar">
-          <ul>
-            <li><%= link_to "Calendar", user_path(current_user) %></li>
-            <li><%= link_to "Exercise Stats", user_exercises_path %></li>
-            <li><%= link_to "About", page_path('about') %></li>
-            <li><%= link_to "Log Out", signout_path %></li>
-          </ul>
-        </nav>
-      <% end %>
+  <% if current_user %>
+    <nav class="navbar">
+      <ul>
+        <li><%= link_to "Calendar", user_path(current_user) %></li>
+        <li><%= link_to "Exercise Stats", user_exercises_path %></li>
+        <li><%= link_to "About", page_path('about') %></li>
+        <li><%= link_to "Log Out", signout_path %></li>
+      </ul>
+    </nav>
   <% end %>
   <div id="container">
     <%= yield %>

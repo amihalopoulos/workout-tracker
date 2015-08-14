@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/amihalopoulos/jquery-modal-rails
-  revision: 02bb82c3bcb1feb5b43e9b2b927003d0ad4b5d1b
+  revision: 471eb3453e401eb19c85c26db5a452bec6952f0d
   specs:
     jquery-modal-rails (0.0.4)
       jquery-ui-rails
@@ -130,7 +130,7 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     spring (1.3.6)
-    sprockets (3.2.0)
+    sprockets (3.3.0)
       rack (~> 1.0)
     sprockets-rails (2.3.2)
       actionpack (>= 3.0)

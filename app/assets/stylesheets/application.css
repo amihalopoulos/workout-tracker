@@ -267,6 +267,13 @@ nav a:hover {
   position:relative;
   top:1px;
 }
+.follow_button {
+  padding: 2px;
+  font-size: 12px;
+}
+#follow_actions {
+  display: inline-block;
+}
 
 form label { float: left; }
 form input { float: right; }

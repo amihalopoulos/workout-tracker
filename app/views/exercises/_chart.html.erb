@@ -1,4 +1,4 @@
-<%= @exercise.name %>
+<h2><%= @exercise.name %></h2>
 
 <%= content_tag :div, "", id: "exercise_chart", data: {exercise: @exercise.get_one_rep_dataset} %>
 <div id="exercise_chart"></div>

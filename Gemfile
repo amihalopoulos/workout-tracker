@@ -32,6 +32,9 @@ gem 'high_voltage', '~> 2.4.0'
 gem "watu_table_builder", :require => "table_builder"
 
 gem 'jquery-ui-rails'
+
+gem 'rails-jquery-autocomplete'
+
 gem 'jquery-modal-rails', :git => 'git://github.com/amihalopoulos/jquery-modal-rails'
 
 # Use Unicorn as the app server

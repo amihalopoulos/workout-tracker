@@ -6,7 +6,6 @@
       <%= @user.name %>
       <div id="follow_actions">
       <% if @user == current_user %>
-        EDIT
       <% elsif @following %>
         <%= render 'followers/unfollow' %>
       <% else %>

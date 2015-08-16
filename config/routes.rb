@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :workouts do
       resources :exercises do
+        get :autocomplete_exercise_name, on: :collection
         resources :rounds
       end
     end

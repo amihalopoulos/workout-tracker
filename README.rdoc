@@ -40,6 +40,7 @@ LOGISTICS
     -drop set/rest-pause
 
     1. TODO:
+    -user auth
     - error handling
     -autocomplete
     -redirect to user show (skip splash) if user is already signed in

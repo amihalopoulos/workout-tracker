@@ -2,7 +2,18 @@
   <div id="user_about">
     <div class="box_header"><h2>Profile</h2></div>
 
-    <div class="div_sub_head"><%= @user.name %></div>
+    <div class="div_sub_head">
+      <%= @user.name %>
+      <div id="follow_actions">
+      <% if @user == current_user %>
+        EDIT
+      <% elsif @following %>
+        <%= render 'followers/unfollow' %>
+      <% else %>
+        <%= render 'followers/follow' %>
+      <% end %>
+      </div>
+    </div>
     <table id="relationships">
       <tr>
         <th>Following</th>
@@ -10,7 +21,7 @@
       </tr>
       <tr>
         <td><%= @user.following.count %></td>
-        <td><%= @user.followers.count %></td>
+        <td id="followers"><%= @user.followers.count %></td>
       </tr>
     </table>
     <div class="div_sub_head">Stats</div>

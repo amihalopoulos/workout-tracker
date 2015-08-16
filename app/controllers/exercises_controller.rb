@@ -1,5 +1,5 @@
 class ExercisesController < ApplicationController
-
+  autocomplete :exercise, :name, :full => true
   def new
     # user = User.find(params[:user_id])
     workout = Workout.find(params[:workout_id])

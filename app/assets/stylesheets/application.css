@@ -478,3 +478,21 @@ padding: 2px;
 }
 .error_messages ul { list-style: none; margin-bottom: 0;}
 .error_messages ul li { background-color:rgba(215,44,44,0.7); margin-bottom: 5px;}
+
+#stats_page {
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.5);
+  display: inline-block;
+}
+
+#user_stats_info {
+  width: 35%;
+  float: left;
+  padding-left: 25px;
+}
+#right_charts {
+  width: 55%;
+  display: inline-block;
+}

@@ -1,6 +1,14 @@
 <div class="content">
 <div id="workout_header">
-  <h1><%= @workout.name %> <span><%= link_to "EDIT", edit_user_workout_path(@workout.user, @workout), remote: true %></span></h1>
+  <h1>
+    <%= @workout.name %>
+    <span>
+      <%= link_to "EDIT", edit_user_workout_path(@workout.user, @workout), remote: true %>
+    </span>
+    <span>
+      <%= link_to "DELETE", user_workout_path(@workout.user, @workout), method: :delete, data: {confirm: 'Are you sure?'} %>
+    </span>
+  </h1>
   <p><%= "#{@workout.date.strftime("%A %B %d %Y")} (#{time_ago_in_words(@workout.date)} ago)"  %></p>
   <p></p>
 </div>

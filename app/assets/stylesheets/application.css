@@ -551,6 +551,10 @@ ul {list-style: none;}
   width: 20%;
   padding-left: 5px;
 }
+.feed_user_name h5 span a {
+  color: blue;
+  text-decoration: none;
+}
 .feed_w_name {
   float: right;
   width: 80%;

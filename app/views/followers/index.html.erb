@@ -14,17 +14,20 @@
 
               <div class="feed_user_name">
                 <h5>
-                  <span><%= link_to w.user.name.capitalize, user_path(w.user) %></span>
+                  <span>user:</span>
+                  <span><%= link_to w.user.name.capitalize, user_path(w.user) %></span> <br>
                   <span><%= "#{time_ago_in_words(w.date)} ago" %></span>
                 </h5>
               </div>
 
               <div class="feed_w_name">
                 <h4 class ="feed_head">
+                  <span class="test">Name of Workout:</span>
                   <%= w.name %>
                 </h4>
 
                 <div class="feed_ind_content">
+                  Exercises: <br>
                  <% w.exercises.reverse.each do |e| %>
                    <%= "#{e.name}(#{e.rounds.count}) " %>
                   <% end %>

@@ -487,11 +487,12 @@ padding: 2px;
 .error_messages ul li { background-color:rgba(215,44,44,0.7); margin-bottom: 5px;}
 
 #stats_page {
-  width: 100%;
+  width: 90%;
   height: 90%;
+    overflow: hidden;
   margin: 0 auto;
   background-color: rgba(255,255,255,0.8);
-  display: inline-block;
+/*  display: inline-block;*/
 }
 
 #user_stats_info {

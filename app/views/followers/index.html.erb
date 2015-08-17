@@ -27,10 +27,15 @@
                 </h4>
 
                 <div class="feed_ind_content">
-                  Exercises: <br>
+                  Exercises:
+                   <ol>
                  <% w.exercises.reverse.each do |e| %>
-                   <%= "#{e.name}(#{e.rounds.count}) " %>
+                   <li><%= "#{e.name}(#{e.rounds.count}) " %></li>
                   <% end %>
+                  </ol>
+                  Notes:
+
+                  <br>
                 </div>
               </div>
 

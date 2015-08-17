@@ -47,3 +47,16 @@
       </div>
   </div>
 </div>
+
+<div id="stats_page">
+  <div class="content">
+    <div id="workout_header">
+      <h1>Other Users</h1>
+    </div>
+    <div id="user_lists" style="text-align: center">
+      <% @users.each do |u| %>
+        <p><%= link_to u.name, user_path(u) %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

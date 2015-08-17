@@ -3,6 +3,7 @@ class FollowersController < ApplicationController
     @user = User.find(params[:user_id])
     @followers = @user.followers.map(&:user)
     @following = @user.following.map(&:user)
+    @users = User.all
     @feed_list = Workout.where(user_id: @following, date: Date.today-30..Date.today).reverse
   end
 

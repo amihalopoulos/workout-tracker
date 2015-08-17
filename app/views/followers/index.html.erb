@@ -23,7 +23,7 @@
               <div class="feed_w_name">
                 <h4 class ="feed_head">
                   <span class="test">Workout:</span>
-                  <%= w.name %>
+                  <%= link_to w.name, user_workout_path(w.user, w) %>
                 </h4>
 
                 <div class="feed_ind_content">

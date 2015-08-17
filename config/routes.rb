@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :users do
+    resources :followers, :only => [:index]
     resources :workouts do
       resources :exercises do
         get :autocomplete_exercise_name, on: :collection
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resource :session, :only => [:new, :create, :destroy]
-   resources :followers, :only => [:create, :destroy]
+  resources :followers, :only => [:create, :destroy]
 
   get 'workouts/(:workout_id)', to: 'workouts#show', as: :show_workout
   get 'users/:id/exercises', to: 'exercises#index', as: :user_exercises

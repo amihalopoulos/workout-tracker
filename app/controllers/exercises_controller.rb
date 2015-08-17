@@ -1,4 +1,5 @@
 class ExercisesController < ApplicationController
+  autocomplete :exercise, :name, :full => true
 
   def new
     # user = User.find(params[:user_id])
@@ -70,6 +71,23 @@ class ExercisesController < ApplicationController
       format.html { redirect_to user_path(current_user) }
       format.js
     end
+  end
+
+  def get_autocomplete_items(parameters)
+   items = active_record_get_autocomplete_items(parameters)
+   items = items.where(:user_id => current_user.id)
+  end
+
+  def autocomplete_exercise_name
+   term = params[:term]
+   if term && !term.empty?
+    items = Exercise.select("distinct name").
+        where("LOWER(name) like ?", '%' + term.downcase + '%').
+        limit(10).order(:name)
+   else
+   items = {}
+   end
+  render :json => json_for_autocomplete(items, :name)
   end
 
   private

@@ -3,7 +3,7 @@
     <h2>Add Exercise</h2>
     <div class="input_label_pair">
       <%= f.label :name, "Exercise: " %>
-      <%= f.text_field :name %>
+      <%= f.autocomplete_field :name, autocomplete_exercise_name_user_workout_exercises_path(@exercise.workout.user, @exercise.workout, @exercise), 'data-auto-focus' => true %>
     </div>
     <div class="input_label_pair">
       <%= f.submit 'Submit', :class => "button edit_button" %>

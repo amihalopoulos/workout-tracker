@@ -1,4 +1,36 @@
 == README
+  TODO:
+  1. News feed of people you follow
+  2. Stats page
+  3. Add programs. User can name program and workouts can fall under this program.  Once user finishes program, stats on weight increases is displayed over that duration.
+  4. Height/Weight for user **can be expanded to calculate the level of user(beginner, advanced, etc)
+  5. super sets / drops sets / rest pause options
+  6. fix save workout and finish workout on modal
+  7. autocomplete for workout name
+
+
+
+  -------------------
+    -user auth
+    - error handling
+    X -autocomplete
+    X -redirect to user show (skip splash) if user is already signed in
+    X  1. for bad user signin/signup info
+    -refactor
+
+    -Adjust Modal (workout show and new)
+      X 1. Make modal wider and not as high on screen
+      X 2. Fix layout of set tables better on modal (should be fixed by #1)
+      X 3. Edit forms with ajax (make neater, maybe float labels left and inputs right)
+    -Graphs/Stats
+      X -1RPM algorithm: lifted*(1/(1.0278-(reps*.0278)))
+      X -be able to pick an exercise and see charts over times
+      X -need to add user_id to exercise to find the data
+
+    -User stuff
+      X - streak
+      X fix past week styling of date
+      X picture --not too important
 
 Goals of this app:
 -Track daily workouts
@@ -38,29 +70,6 @@ LOGISTICS
     -reps completed
     -weight used
     -drop set/rest-pause
-
-    1. TODO:
-    -user auth
-    - error handling
-    -autocomplete
-    -redirect to user show (skip splash) if user is already signed in
-      1. for bad user signin/signup info
-    -refactor
-
-    -Adjust Modal (workout show and new)
-      X 1. Make modal wider and not as high on screen
-      X 2. Fix layout of set tables better on modal (should be fixed by #1)
-      X 3. Edit forms with ajax (make neater, maybe float labels left and inputs right)
-    2. Graphs/Stats
-      X -1RPM algorithm: lifted*(1/(1.0278-(reps*.0278)))
-      X -be able to pick an exercise and see charts over times
-      X -need to add user_id to exercise to find the data
-
-    3. User stuff
-      X - streak
-      X fix past week styling of date
-      -points generator (1 point for new workout, 1 point for each exercise, 1 point for lifting new heavy blah)
-      X picture --not too important
 
 
     EXERCISES

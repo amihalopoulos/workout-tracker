@@ -22,11 +22,11 @@ class User < ActiveRecord::Base
   end
 
   def workouts_this_month
-    self.workouts.where(:date => Date.today.beginning_of_month..Date.today).count
+    self.workouts.where(:date => Date.today.beginning_of_month..Date.today)
   end
 
   def workouts_this_week
-    self.workouts.where(:date => Date.today.beginning_of_week-1..Date.today).count
+    self.workouts.where(:date => Date.today.beginning_of_week-1..Date.today)
   end
 
 end

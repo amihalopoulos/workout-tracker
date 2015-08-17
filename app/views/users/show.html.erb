@@ -19,8 +19,12 @@
         <th>Followers</th>
       </tr>
       <tr>
-        <td><%= @user.following.count %></td>
-        <td id="followers"><%= @user.followers.count %></td>
+        <td>
+          <%= link_to_modal @user.following.count, "#following" %>
+        </td>
+        <td id="followers">
+          <%= link_to_modal @user.followers.count, "#followers_info" %>
+         </td>
       </tr>
     </table>
     <div class="div_sub_head">Stats</div>
@@ -71,4 +75,11 @@
   <%= render 'workouts/new', locales: {user: @user} %>
   <br>
   <%= button_to "Finished", user_path(@user), :method => "get", class: "non-form-button" %>
+</div>
+<div id="following" style="display: none;">
+  <%= render 'followers/following' %>
+</div>
+
+<div id="followers_info" style="display: none;">
+  <%= render 'followers/followers' %>
 </div>

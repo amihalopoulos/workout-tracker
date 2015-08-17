@@ -3,8 +3,7 @@ class FollowersController < ApplicationController
     @user = User.find(params[:user_id])
     @followers = @user.followers.map(&:user)
     @following = @user.following.map(&:user)
-    @feed_list = {}
-    @following.each { |f| @feed_list[f] = f.workouts_this_month }
+    @feed_list = Workout.where(user_id: @following, date: Date.today.beginning_of_month-1..Date.today).reverse
   end
 
   def create

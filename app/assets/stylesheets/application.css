@@ -289,7 +289,7 @@ form input { float: right; }
   height: 20px;
 }
 
-#workout_header {
+#workout_header, .follow_header {
   width: 100%;
   color: white;
   text-align: center;

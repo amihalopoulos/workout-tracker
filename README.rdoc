@@ -7,6 +7,8 @@
   5. super sets / drops sets / rest pause options
   6. fix save workout and finish workout on modal
   7. autocomplete for workout name
+  8. Add notes to workouts
+  X 9. create modals for followers when clicked from profile section
 
 
 

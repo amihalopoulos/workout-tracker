@@ -14,8 +14,8 @@
     <nav class="navbar">
       <ul>
         <li><%= link_to "Calendar", user_path(current_user) %></li>
-        <li><%= link_to "Feed", user_followers_path(current_user) %></li>
         <li><%= link_to "Exercise Stats", user_exercises_path(current_user) %></li>
+        <li><%= link_to "Feed", user_followers_path(current_user) %></li>
         <li><%= link_to "About", page_path('about') %></li>
         <li><%= link_to "Log Out", signout_path %></li>
       </ul>

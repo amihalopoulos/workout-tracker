@@ -37,8 +37,9 @@
         <% end %>
       <% end %>
     <% end %>
-    <p><%= link_to_modal "Add New Workout", "#demo-form", :class=>"button" %></p>
-
+    <% if current_user && current_user == @user %>
+      <p><%= link_to_modal "Add New Workout", "#demo-form", :class=>"button" %></p>
+    <% end %>
   </div>
 </div>
 

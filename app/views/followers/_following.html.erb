@@ -3,6 +3,6 @@
     <h1>Following</h1>
   </div>
   <% @user.following.each do |following| %>
-    <%= link_to following.user.name, user_path(following.user) %>
+    <p><%= link_to following.user.name, user_path(following.user) %></p>
   <% end %>
 </div>

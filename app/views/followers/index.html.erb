@@ -1,5 +1,34 @@
 <div id="stats_page">
-<p><%= @user.name %></p>
-  <%= render 'followers' %>
-  <%= render 'following' %>
+  <div class="content" id="feed">
+    <div id="workout_header">
+      <h1>Followed by <%= @user.name %></h1>
+    </div>
+
+    <ul>
+    <% @feed_list.each do |user, workouts|  %>
+      <% workouts.each do |w| %>
+        <li class="feed_workout">
+          <table id="relationships">
+            <tr>
+              <th>
+                <span class="left"><%= link_to user.name.capitalize, user_path(user) %></span>
+                <span class="right">on <%= w.date.strftime("%A %b %e") %></span>
+              </th>
+              <th>
+                <%= w.name %>
+              </th>
+            </tr>
+          <% w.exercises.reverse.each do |e| %>
+            <tr>
+              <td>
+                <%= "#{e.name}(#{e.rounds.count}) " %>
+              </td>
+            </tr>
+            <% end %>
+          </table>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
+</div>
 </div>

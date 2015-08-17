@@ -2,12 +2,14 @@
 <div id="workout_header">
   <h1>
     <%= @workout.name %>
-    <span>
-      <%= link_to "EDIT", edit_user_workout_path(@workout.user, @workout), remote: true %>
-    </span>
-    <span>
-      <%= link_to "DELETE", user_workout_path(@workout.user, @workout), method: :delete, data: {confirm: 'Are you sure?'} %>
-    </span>
+    <% if current_user && current_user == @workout.user %>
+      <span>
+        <%= link_to "EDIT", edit_user_workout_path(@workout.user, @workout), remote: true %>
+      </span>
+      <span>
+        <%= link_to "DELETE", user_workout_path(@workout.user, @workout), method: :delete, data: {confirm: 'Are you sure?'} %>
+      </span>
+    <% end %>
   </h1>
   <p><%= "#{@workout.date.strftime("%A %B %d %Y")} (#{time_ago_in_words(@workout.date)} ago)"  %></p>
   <p></p>
@@ -15,7 +17,9 @@
 <div class="exercise_list">
   <%= render @workout.exercises %>
 </div>
-<p style="float: left;"><%= link_to "Add Exercise", new_user_workout_exercise_path(@workout.user, @workout), remote: true, id: "new_exercise_link" %></p>
+<% if current_user && current_user == @workout.user %>
+  <p style="float: left;"><%= link_to "Add Exercise", new_user_workout_exercise_path(@workout.user, @workout), remote: true, id: "new_exercise_link" %></p>
+<% end %>
 <div class="forms_area"></div>
 
 </div>

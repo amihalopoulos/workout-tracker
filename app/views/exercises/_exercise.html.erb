@@ -2,12 +2,14 @@
   <%= t.head do %>
     <%= t.r do %>
       <th colspan="3" class="ex_title"><%= link_to exercise.name, chart_exercise_path(exercise), remote: true, class: "link_to_chart" %>
+        <% if current_user && current_user == exercise.user %>
         <span>
           <%= link_to "EDIT", edit_user_workout_exercise_path(exercise.workout.user, exercise.workout, exercise), class: "edit_link", remote: true %>
         </span>
         <span>
           <%= link_to "DELETE", user_workout_exercise_path(exercise.workout.user, exercise.workout, exercise), method: :delete, data: {confirm: 'Are you sure?'}, remote: true %>
         </span>
+        <% end %>
       </th>
     <% end %>
     <%= t.r do %>
@@ -25,7 +27,9 @@
       <% x +=1 %>
     <% end %>
   <% end %>
-  <th colspan="3"><%= link_to "Add Sets", new_user_workout_exercise_round_path(exercise.workout.user, exercise.workout, exercise), remote: true %></th>
+  <% if current_user && current_user == exercise.user %>
+    <th colspan="3"><%= link_to "Add Sets", new_user_workout_exercise_round_path(exercise.workout.user, exercise.workout, exercise), remote: true %></th>
+  <% end %>
 <% end %>
 
 

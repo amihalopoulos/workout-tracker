@@ -1,6 +1,6 @@
 == README
   TODO:
-  1. News feed of people you follow
+  X 1. News feed of people you follow
   2. Stats page
   3. Add programs. User can name program and workouts can fall under this program.  Once user finishes program, stats on weight increases is displayed over that duration.
   4. Height/Weight for user **can be expanded to calculate the level of user(beginner, advanced, etc)
@@ -10,6 +10,8 @@
   8. Add notes to workouts
   X 9. create modals for followers when clicked from profile section
   10. make add exercises/rounds forms look like part of table
+  11. user image
+  12. specify amount of sets to only fill out 1 form
   -------------------
 
   Side Thoughts:

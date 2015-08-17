@@ -1,8 +1,10 @@
 class FollowersController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @followers = @user.followers
-    @following = @user.following
+    @followers = @user.followers.map(&:user)
+    @following = @user.following.map(&:user)
+    @feed_list = {}
+    @following.each { |f| @feed_list[f] = f.workouts_this_month }
   end
 
   def create

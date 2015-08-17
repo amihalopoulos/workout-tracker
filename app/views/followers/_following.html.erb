@@ -1,0 +1,8 @@
+<div class="content">
+  <div id="workout_header">
+    <h1>Following</h1>
+  </div>
+  <% @user.following.each do |following| %>
+    <%= link_to following.user.name, user_path(following.user) %>
+  <% end %>
+</div>

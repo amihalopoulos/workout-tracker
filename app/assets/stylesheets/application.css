@@ -291,7 +291,7 @@ form input { float: right; }
 
 #workout_header {
   width: 100%;
-   color: white;
+  color: white;
   text-align: center;
   padding: 10px 0;
   background-color: #336699;
@@ -515,7 +515,7 @@ padding: 2px;
 }
 ul {list-style: none;}
 
-#feed {
+/*#feed {
   text-align: center;
   font-size: 25px;
 }
@@ -528,4 +528,36 @@ ul {list-style: none;}
   text-align: left;
   margin: 20px;
 }
+.feed_table td {
+  text-align: left;
+}*/
 
+
+/**/
+.feed_content {
+  margin: 10px auto;
+  width: 70%;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 3px 2px 0px #CCC;
+  -webkit-box-shadow: 0px 3px 2px 0px #CCC;
+  box-shadow: 0px 3px 2px 0px #CCC;
+}
+.feed_user_name {
+  position: absolute;
+  height: 100px;
+  width: 20%;
+  padding-left: 5px;
+}
+.feed_w_name {
+  float: right;
+  width: 80%;
+}
+.feed_head {
+  color: white;
+  margin-top: 0;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: #336699;
+}

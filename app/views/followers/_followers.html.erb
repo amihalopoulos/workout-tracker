@@ -2,7 +2,7 @@
   <div class="follow_header">
     <h1>Followers</h1>
   </div>
-  <% @user.followers.each do |follower| %>
-    <p><%= link_to follower.user.name, user_path(follower.user) %></p>
+  <% @user.followers.each do |f| %>
+    <p><%= link_to f.follower.name, user_path(f.user) %></p>
   <% end %>
 </div>

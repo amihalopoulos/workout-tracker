@@ -2,6 +2,12 @@
   TODO:
   X 1. News feed of people you follow
   2. Stats page
+    -how to organize:
+      -everything below will be tables
+      -recent gains
+      -best gains
+      -by muscle category (combine all workouts for legg)
+      -this month, last 3 months, this year
   3. Add programs. User can name program and workouts can fall under this program.  Once user finishes program, stats on weight increases is displayed over that duration.
   4. Height/Weight for user **can be expanded to calculate the level of user(beginner, advanced, etc)
   5. super sets / drops sets / rest pause options

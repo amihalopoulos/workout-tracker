@@ -1,0 +1,32 @@
+<div>
+
+  <table id="relationships">
+      <tr>
+        <th>Following</th>
+        <th>Followers</th>
+      </tr>
+      <tr>
+        <td>
+          <%= link_to_modal @user.following.count, "#following" %>
+        </td>
+        <td id="followers">
+          <%= link_to_modal @user.followers.count, "#followers_info" %>
+         </td>
+      </tr>
+    </table>
+
+  <h5>Recent Activity</h5>
+  <% @user.following.each do |u| %>
+    <% u = u.user %>
+    <% if u.workouts_this_week.count > 0 %>
+      <% w = u.workouts.last %>
+      <p><%= link_to u.name.capitalize, user_path(u) %>
+      completed workout
+      <%= link_to w.name, user_workout_path(u, w) %>
+      <%= "#{time_ago_in_words(w.created_at)} ago" %>
+
+    </p>
+    <% end %>
+  <% end %>
+
+</div>

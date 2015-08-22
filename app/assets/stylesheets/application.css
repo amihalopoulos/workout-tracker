@@ -601,3 +601,6 @@ td a {color: #fff;}
 
   border-bottom: 10px solid #666;
 }
+#minifeed a {
+  color: white;
+}

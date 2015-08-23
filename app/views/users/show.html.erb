@@ -26,22 +26,30 @@
 
 
     <div class="mini">
-    <div class="div_sub_head">Stats <div class="arrow-down"></div></div>
-      <div class="sub_content hide">
-      <%= table_for @stats, :html => { :class => 'stats'} do |t| %>
-        <%= t.body do |x, stat| %>
-          <%= t.r do %>
-            <%= t.d(x) %>
-            <%= t.d(stat) %>
+      <div class="div_sub_head">Stats <div class="arrow-down"></div></div>
+        <div class="sub_content hide">
+        <%= table_for @stats, :html => { :class => 'stats'} do |t| %>
+          <%= t.body do |x, stat| %>
+            <%= t.r do %>
+              <%= t.d(x) %>
+              <%= t.d(stat) %>
 
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
-    </div>
       </div>
-      <% if current_user && current_user == @user %>
-        <p><%= link_to_modal "Add New Workout", "#demo-form", :class=>"button" %></p>
-      <% end %>
+    </div>
+
+    <div class="mini">
+      <div class="div_sub_head">Recent Gains <div class="arrow-down"></div></div>
+      <div class="sub_content hide">
+        <%= @user.best_gains %>
+      </div>
+    </div>
+
+    <% if current_user && current_user == @user %>
+      <p><%= link_to_modal "Add New Workout", "#demo-form", :class=>"button" %></p>
+    <% end %>
   </div>
 </div>
 

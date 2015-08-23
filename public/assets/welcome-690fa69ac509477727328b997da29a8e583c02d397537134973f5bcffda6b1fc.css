@@ -1,0 +1,31 @@
+html {
+  background: url('http://www.canyourezist.com/img/banner-bg.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #464646;
+}
+
+#form {
+  background-color:rgba(117,117,117,0.5);
+  text-align: center;
+  padding: 15px;
+  width: 30%;
+  margin: auto;
+  border-radius: 5px;
+  color: white;
+  margin-top: 10%;
+}
+
+#form a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  padding-bottom: 5px;
+}

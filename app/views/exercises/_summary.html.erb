@@ -1,15 +1,15 @@
-<table>
+<table id="chart_table">
   <tr>
     <td>Exercise Name:</td>
     <td><%= @exercise.name %></td>
   </tr>
   <tr>
-    <td># Times Completed:</td>
-    <td><%= @exercise.name %></td>
+    <td>Times Completed:</td>
+    <td><%= @exercise.get_one_rep_dataset.count %></td>
   </tr>
   <tr>
-    <td>Current 1 Rep Max:</td>
-    <td><%= @exercise.name %></td>
+    <td>One Rep Max:</td>
+    <td><%=  %></td>
   </tr>
+
 </table>
-<%= render 'exercises/chart' %>

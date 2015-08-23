@@ -3,6 +3,6 @@
     <h1>Followers</h1>
   </div>
   <% @user.followers.each do |f| %>
-    <p><%= link_to f.follower.name, user_path(f.user) %></p>
+    <p><%= link_to f.follower.name, user_path(f.follower) %></p>
   <% end %>
 </div>

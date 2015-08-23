@@ -604,3 +604,15 @@ td a {color: #fff;}
 #minifeed a {
   color: white;
 }
+.ex_names_list {
+  color: white;
+  padding: 0;
+  margin: 0
+}
+#search_form {
+ width: 100%;
+ display: inline-block;
+}
+#search_form label, #search_form input {
+  float: none;
+}

@@ -1,8 +1,12 @@
-<h2><%= @exercise.name %></h2>
-
+<% if @exercise %>
+  <%= render 'summary' %>
 <%= content_tag :div, "", id: "exercise_chart", data: {exercise: @exercise.get_one_rep_dataset} %>
-<div id="exercise_chart"></div>
-  <script>
+
+<% else %>
+  <p>No results for this exercise</p>
+<% end %>
+
+<script>
   new Morris.Line({
 
   element: 'exercise_chart',

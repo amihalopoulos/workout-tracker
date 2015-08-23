@@ -367,8 +367,9 @@ h1 span, h1 span a, .ex_title span a {
 }
 
 .exercise_list {
-  margin-left: auto;
+  margin-left: 0;
   width: 100%;
+  height: 400px;
   display: inline-block;
 }
 
@@ -506,7 +507,7 @@ padding: 2px;
 }
 
 #user_stats_info {
-  width: 35%;
+  width: 25%;
   float: left;
   padding-left: 25px;
 }
@@ -603,4 +604,27 @@ td a {color: #fff;}
 }
 #minifeed a {
   color: white;
+}
+.ex_names_list {
+  color: white;
+  padding: 0;
+  margin: 0
+}
+#search_form {
+ width: 100%;
+ display: inline-block;
+}
+#search_form label, #search_form input {
+  float: none;
+}
+#exercise_chart {
+  height: 300px;
+  width: auto;
+  background-color: #336699;
+}
+#chart_table {
+
+}
+#chart_table td {
+  padding-right: 50px;
 }

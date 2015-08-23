@@ -367,8 +367,9 @@ h1 span, h1 span a, .ex_title span a {
 }
 
 .exercise_list {
-  margin-left: auto;
+  margin-left: 0;
   width: 100%;
+  height: 400px;
   display: inline-block;
 }
 
@@ -506,7 +507,7 @@ padding: 2px;
 }
 
 #user_stats_info {
-  width: 35%;
+  width: 25%;
   float: left;
   padding-left: 25px;
 }
@@ -615,4 +616,15 @@ td a {color: #fff;}
 }
 #search_form label, #search_form input {
   float: none;
+}
+#exercise_chart {
+  height: 300px;
+  width: auto;
+  background-color: #336699;
+}
+#chart_table {
+
+}
+#chart_table td {
+  padding-left: 50px;
 }

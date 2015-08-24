@@ -1,5 +1,5 @@
 <% if @exercise %>
-  <%= render 'summary' %>
+  <%= render 'exercises/summary' %>
 <%= content_tag :div, "", id: "exercise_chart", data: {exercise: @exercise.get_one_rep_dataset} %>
 
 <% else %>

@@ -634,3 +634,4 @@ td a {color: #fff;}
   height: 20px;
   border: 1px solid black
 }
+.morris-hover{position:absolute;z-index:1000;background-color: white; padding: 10px; border-radius: 5px; text-align: center;}

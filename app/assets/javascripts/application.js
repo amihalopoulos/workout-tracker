@@ -15,6 +15,9 @@
 //= require jquery-ui
 //= require autocomplete-rails
 //= require turbolinks
+//= require react
+//= require react_ujs
+//= require components
 //= require jquery.modal
 //= require raphael
 //= require morris

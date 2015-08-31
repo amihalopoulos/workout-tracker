@@ -56,7 +56,8 @@ class ExercisesController < ApplicationController
 
    def index
     hash = {}
-    @exercises = current_user.exercises.index_by {|r| r[:name]}.values
+    user = User.find(params[:id])
+    @exercises = user.exercises.index_by {|r| r[:name]}.values
     @exercises.each do |e|
       sets = e.rounds.count
       hash[e] = sets

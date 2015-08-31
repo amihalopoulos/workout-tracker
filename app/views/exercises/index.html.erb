@@ -5,11 +5,9 @@
     </div>
 
     <div id="user_stats_info">
+      <%= react_component 'FilterableExerciseContainer', { exercises: @exercises }, {prerender: true} %>
     <h4 style="margin-bottom: 5px;">Search or Click an Exercise</h4>
-    <%= render "search/search" %>
-    <% @hash.each do |exercise, value| %>
-      <p class="ex_names_list"><%= link_to exercise.name, chart_exercise_path(exercise), :class => 'chart_link', remote: true %></p>
-    <% end %>
+
     </div>
     <div id="right_charts">
       <h4>See Workout by Workout Comparisons of Your Calculated 1RPM</h4>

@@ -510,6 +510,7 @@ padding: 2px;
   width: 25%;
   float: left;
   padding-left: 25px;
+  padding-top: 15px;
 }
 #right_charts {
   width: 55%;
@@ -613,6 +614,11 @@ td a {color: #fff;}
 #search_form {
  width: 100%;
  display: inline-block;
+ margin-bottom: 10px;
+}
+#search_form input {
+  height: 20px;
+  width: 150px;
 }
 #search_form label, #search_form input {
   float: none;
